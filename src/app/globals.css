@@ -1,0 +1,270 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "../styles/fluid.css";
+@import "../styles/effects.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================================================
+   INVICTA DESIGN SYSTEM
+   Three-layer tokens: primitive (raw) → semantic (purpose) → component.
+   Language: "Editorial Precision" — crimson · ink · ivory, warm neutrals.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   LAYER 1 — PRIMITIVES (raw, literal values → generate `*-crimson-600` etc.)
+   -------------------------------------------------------------------------- */
+@theme {
+  /* Brand — Invicta Crimson (the warhorse red). Hue held constant (~27). */
+  --color-crimson-50: oklch(0.971 0.013 25);
+  --color-crimson-100: oklch(0.936 0.032 26);
+  --color-crimson-200: oklch(0.885 0.064 26);
+  --color-crimson-300: oklch(0.803 0.112 27);
+  --color-crimson-400: oklch(0.701 0.168 27);
+  --color-crimson-500: oklch(0.603 0.206 27);
+  --color-crimson-600: oklch(0.517 0.202 27); /* PRIMARY BRAND (~#B4121B) */
+  --color-crimson-700: oklch(0.451 0.178 27);
+  --color-crimson-800: oklch(0.396 0.15 27);
+  --color-crimson-900: oklch(0.348 0.12 27); /* oxblood */
+  --color-crimson-950: oklch(0.255 0.088 27);
+
+  /* Ink & Ivory — the editorial canvas (warm-leaning, never pure black/white). */
+  --color-ink: oklch(0.175 0.006 45);
+  --color-ivory: oklch(0.988 0.005 85);
+
+  /* Premium elevation — soft, warm-tinted, low-spread shadows. */
+  --shadow-xs: 0 1px 2px oklch(0.2 0.01 45 / 0.06);
+  --shadow-sm: 0 2px 8px -2px oklch(0.2 0.01 45 / 0.08);
+  --shadow-md: 0 8px 24px -6px oklch(0.2 0.01 45 / 0.1);
+  --shadow-lg: 0 20px 48px -12px oklch(0.2 0.01 45 / 0.14);
+  --shadow-xl: 0 32px 64px -16px oklch(0.2 0.01 45 / 0.18);
+  --shadow-crimson: 0 16px 40px -12px oklch(0.517 0.202 27 / 0.35);
+
+  /* Signature easings → `ease-out-expo`, `ease-out-quint`, `ease-in-out-quint`. */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+/* --------------------------------------------------------------------------
+   LAYER 3 — COMPONENT/UTILITY MAPPING
+   Maps semantic vars (defined below) to Tailwind color/font utilities so
+   `bg-background`, `text-brand`, `font-display` stay theme-switchable.
+   -------------------------------------------------------------------------- */
+@theme inline {
+  /* Typography — resolves to the `next/font` runtime variables set on <html>. */
+  --font-display: var(--font-display);
+  --font-heading: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Semantic color → utility mappings. */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand semantic tokens → `bg-brand`, `text-brand`, `bg-brand-soft`, … */
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Radius scale (component tokens). */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* --------------------------------------------------------------------------
+   LAYER 2 — SEMANTIC TOKENS · LIGHT (default: ivory editorial canvas)
+   -------------------------------------------------------------------------- */
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(0.988 0.005 85); /* ivory */
+  --foreground: oklch(0.175 0.006 45); /* ink */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.175 0.006 45);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.175 0.006 45);
+
+  --primary: oklch(0.517 0.202 27); /* crimson-600 */
+  --primary-foreground: oklch(0.988 0.005 85);
+  --secondary: oklch(0.968 0.004 85);
+  --secondary-foreground: oklch(0.263 0.009 50);
+  --muted: oklch(0.968 0.004 85);
+  --muted-foreground: oklch(0.447 0.011 60);
+  --accent: oklch(0.955 0.012 35);
+  --accent-foreground: oklch(0.175 0.006 45);
+  --destructive: oklch(0.577 0.216 27);
+  --destructive-foreground: oklch(0.988 0.005 85);
+
+  --border: oklch(0.908 0.005 75);
+  --input: oklch(0.908 0.005 75);
+  --ring: oklch(0.517 0.202 27); /* crimson focus ring */
+
+  /* Brand tokens */
+  --brand: oklch(0.517 0.202 27);
+  --brand-foreground: oklch(0.988 0.005 85);
+  --brand-strong: oklch(0.451 0.178 27);
+  --brand-soft: oklch(0.936 0.032 26);
+
+  --chart-1: oklch(0.517 0.202 27);
+  --chart-2: oklch(0.701 0.168 27);
+  --chart-3: oklch(0.366 0.01 55);
+  --chart-4: oklch(0.556 0.011 65);
+  --chart-5: oklch(0.803 0.112 27);
+
+  --sidebar: oklch(0.985 0.003 85);
+  --sidebar-foreground: oklch(0.175 0.006 45);
+  --sidebar-primary: oklch(0.517 0.202 27);
+  --sidebar-primary-foreground: oklch(0.988 0.005 85);
+  --sidebar-accent: oklch(0.968 0.004 85);
+  --sidebar-accent-foreground: oklch(0.263 0.009 50);
+  --sidebar-border: oklch(0.908 0.005 75);
+  --sidebar-ring: oklch(0.517 0.202 27);
+}
+
+/* --------------------------------------------------------------------------
+   LAYER 2 — SEMANTIC TOKENS · DARK (immersive register: gaming / hero moments)
+   -------------------------------------------------------------------------- */
+.dark {
+  --background: oklch(0.165 0.006 45); /* warm near-black */
+  --foreground: oklch(0.965 0.005 85); /* ivory */
+  --card: oklch(0.205 0.007 45);
+  --card-foreground: oklch(0.965 0.005 85);
+  --popover: oklch(0.205 0.007 45);
+  --popover-foreground: oklch(0.965 0.005 85);
+
+  --primary: oklch(0.585 0.207 27); /* brighter crimson for dark ground */
+  --primary-foreground: oklch(0.985 0.005 85);
+  --secondary: oklch(0.268 0.009 50);
+  --secondary-foreground: oklch(0.965 0.005 85);
+  --muted: oklch(0.268 0.009 50);
+  --muted-foreground: oklch(0.709 0.009 70);
+  --accent: oklch(0.3 0.02 35);
+  --accent-foreground: oklch(0.965 0.005 85);
+  --destructive: oklch(0.65 0.2 27);
+  --destructive-foreground: oklch(0.985 0.005 85);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.585 0.207 27);
+
+  --brand: oklch(0.585 0.207 27);
+  --brand-foreground: oklch(0.985 0.005 85);
+  --brand-strong: oklch(0.517 0.202 27);
+  --brand-soft: oklch(0.3 0.08 27);
+
+  --chart-1: oklch(0.585 0.207 27);
+  --chart-2: oklch(0.701 0.168 27);
+  --chart-3: oklch(0.709 0.009 70);
+  --chart-4: oklch(0.556 0.011 65);
+  --chart-5: oklch(0.803 0.112 27);
+
+  --sidebar: oklch(0.205 0.007 45);
+  --sidebar-foreground: oklch(0.965 0.005 85);
+  --sidebar-primary: oklch(0.585 0.207 27);
+  --sidebar-primary-foreground: oklch(0.985 0.005 85);
+  --sidebar-accent: oklch(0.268 0.009 50);
+  --sidebar-accent-foreground: oklch(0.965 0.005 85);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.585 0.207 27);
+}
+
+/* --------------------------------------------------------------------------
+   BASE LAYER — editorial defaults
+   -------------------------------------------------------------------------- */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: auto; /* Lenis owns smooth scrolling */
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    font-feature-settings: "ss01", "cv01";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headings default to the display serif with editorial balance. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  /* Body copy reads better slightly loosened; avoid orphans. */
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Brand-tinted text selection. */
+  ::selection {
+    background-color: var(--brand);
+    color: var(--brand-foreground);
+  }
+
+  /* Consistent, accessible focus ring. */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /* Honor reduced-motion at the platform level as a safety net. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
