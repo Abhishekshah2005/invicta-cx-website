@@ -13,6 +13,8 @@ export interface IndexItem {
   meta: string;
   href: string;
   imageLabel: string;
+  /** Real preview photo (public path). Falls back to the branded panel. */
+  image?: string;
 }
 
 interface IndexListProps {
@@ -106,6 +108,8 @@ export function IndexList({ kicker, heading, items }: IndexListProps) {
               tone="ink"
               ratio="4 / 3"
               label={preview.imageLabel}
+              src={preview.image}
+              sizes="288px"
               className="w-72"
             />
           ) : null}
