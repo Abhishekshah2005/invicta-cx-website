@@ -13,6 +13,7 @@ export const ecommerce: IndustryContent = {
     lead: "Invicta runs the pre-sale, post-purchase, and peak-season support behind e-commerce brands — protecting conversion, revenue, and the repeat rate that actually makes the numbers work.",
     imageLabel:
       "An e-commerce support specialist helping a shopper over live chat, warm and quick, bright modern light — editorial, human.",
+    image: "/assets/industries/ecommerce/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

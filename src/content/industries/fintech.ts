@@ -13,6 +13,7 @@ export const fintech: IndustryContent = {
     lead: "Invicta runs the human side of financial platforms — verification, fraud defence, and support that stays calm and correct when someone's money is on the line.",
     imageLabel:
       "A financial-operations specialist at a secure workstation, focused and composed, soft daylight — documentary, premium.",
+    image: "/assets/industries/fintech/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

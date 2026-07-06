@@ -13,6 +13,7 @@ export const travel: IndustryContent = {
     lead: "Invicta runs the around-the-clock, multilingual support behind travel and hospitality brands — turning disruption, delays, and last-minute changes into loyalty.",
     imageLabel:
       "A travel-support specialist calm on a headset at night, world map glowing softly behind — cinematic, reassuring, human.",
+    image: "/assets/industries/travel/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

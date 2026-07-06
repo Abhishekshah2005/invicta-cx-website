@@ -13,6 +13,7 @@ export const saas: IndustryContent = {
     lead: "Invicta runs on-brand, technically fluent support that turns tickets into renewals — resolving fast, scaling with you, and protecting the revenue you've already won.",
     imageLabel:
       "A SaaS support specialist at a clean multi-monitor desk, focused and calm, modern daylight — editorial, shallow depth of field.",
+    image: "/assets/industries/saas/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

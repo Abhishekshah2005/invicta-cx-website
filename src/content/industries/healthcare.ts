@@ -13,6 +13,7 @@ export const healthcare: IndustryContent = {
     lead: "Invicta provides the compassionate, compliant human support behind healthcare and digital-health platforms — the calm voice at the other end when it matters most.",
     imageLabel:
       "A patient-support specialist mid-call, warm and attentive, soft natural light in a calm room — human, reassuring, cinematic.",
+    image: "/assets/industries/healthcare/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },
