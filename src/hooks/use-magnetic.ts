@@ -27,7 +27,11 @@ export function useMagnetic<T extends HTMLElement = HTMLButtonElement>({
   useGSAP(
     () => {
       const el = ref.current;
-      if (!el || reducedMotion) return;
+      // Magnetic pull is a fine-pointer (mouse) interaction only — on touch,
+      // pointermove would drag the element under the finger. Desktop and touch
+      // deliberately get different behaviour.
+      const finePointer = window.matchMedia("(pointer: fine)").matches;
+      if (!el || reducedMotion || !finePointer) return;
 
       const xTo = gsap.quickTo(el, "x", { duration, ease: "power3.out" });
       const yTo = gsap.quickTo(el, "y", { duration, ease: "power3.out" });

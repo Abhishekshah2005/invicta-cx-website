@@ -5,17 +5,23 @@ import { env } from "@/env";
 
 const baseUrl = env.NEXT_PUBLIC_SITE_URL || SITE.url;
 
+type CreateMetadataOptions = Metadata & {
+  /** Absolute path (e.g. "/services/kyc"). Sets the canonical URL + og:url. */
+  path?: string;
+};
+
 /**
  * Build a complete, SEO-ready `Metadata` object with sensible OpenGraph /
- * Twitter defaults. Pass per-page overrides; anything omitted inherits the
- * site-wide defaults. Nested `openGraph` / `twitter` / `robots` overrides are
- * shallow-merged onto the defaults rather than replacing them.
+ * Twitter defaults and a canonical URL. Pass per-page overrides; anything
+ * omitted inherits the site-wide defaults. Nested `openGraph` / `twitter` /
+ * `robots` overrides are shallow-merged onto the defaults.
  */
-export function createMetadata(overrides: Metadata = {}): Metadata {
-  const { title, description, openGraph, twitter, robots, ...rest } = overrides;
+export function createMetadata(overrides: CreateMetadataOptions = {}): Metadata {
+  const { title, description, openGraph, twitter, robots, alternates, path, ...rest } = overrides;
 
   const resolvedTitle = typeof title === "string" ? title : SITE.name;
   const resolvedDescription = typeof description === "string" ? description : SITE.description;
+  const canonical = path ? new URL(path, baseUrl).toString() : baseUrl;
 
   return {
     metadataBase: new URL(baseUrl),
@@ -25,10 +31,11 @@ export function createMetadata(overrides: Metadata = {}): Metadata {
     },
     description: description ?? SITE.description,
     applicationName: SITE.name,
+    alternates: { canonical, ...alternates },
     openGraph: {
       type: "website",
       locale: SITE.locale,
-      url: baseUrl,
+      url: canonical,
       siteName: SITE.name,
       title: resolvedTitle,
       description: resolvedDescription,

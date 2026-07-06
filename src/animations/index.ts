@@ -11,6 +11,7 @@ export * from "./fade";
 export * from "./textReveal";
 export * from "./imageReveal";
 export * from "./parallax";
+export * from "./progress";
 export * from "./hero";
 export * from "./cards";
 export * from "./horizontal";

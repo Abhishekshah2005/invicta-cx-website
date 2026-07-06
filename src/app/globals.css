@@ -45,6 +45,10 @@
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+
+  /* Large-desktop breakpoint (1920px) → `3xl:` utilities. Complements Tailwind's
+     defaults (md 768 = tablet, lg 1024 = laptop, xl 1280, 2xl 1536). */
+  --breakpoint-3xl: 120rem;
 }
 
 /* --------------------------------------------------------------------------

@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 
 import { gsap, useGSAP } from "@/lib/gsap";
 import { cn } from "@/lib/utils";
@@ -16,6 +17,20 @@ import { CONVERSATIONS, COLD_OPEN } from "@/content/home";
  */
 export function ColdOpen() {
   const scope = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [soundOn, setSoundOn] = useState(false);
+
+  const toggleSound = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    const next = !soundOn;
+    v.muted = !next;
+    if (next) {
+      v.volume = 0.6;
+      void v.play().catch(() => {});
+    }
+    setSoundOn(next);
+  };
 
   useGSAP(
     () => {
@@ -92,12 +107,30 @@ export function ColdOpen() {
       ref={scope}
       className="dark relative min-h-svh overflow-hidden bg-background text-foreground"
     >
+      {/* Ambient background video — deepest layer, dimmed so the network and
+          copy stay legible over it. */}
+      <video
+        ref={videoRef}
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-60"
+        autoPlay
+        muted={!soundOn}
+        loop
+        playsInline
+        aria-hidden
+        preload="metadata"
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
+      {/* Only a whisper of tint — the footage stays clear. Legibility comes from
+          the copy's own shadow (below), not from dimming the video. */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-background/25" />
+
       <div className="co-network pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_35%,transparent_82%)]">
         <ConversationNetwork />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-svh max-w-lg flex-col items-center justify-center gap-10 px-6">
-        <p className="co-frame font-mono text-xs tracking-[0.25em] text-foreground/50 uppercase">
+      <div className="relative z-10 mx-auto flex min-h-svh max-w-lg flex-col items-center justify-center gap-10 px-6 [text-shadow:0_1px_18px_rgba(0,0,0,0.9)]">
+        <p className="co-frame font-mono text-xs tracking-[0.25em] text-foreground/80 uppercase">
           {COLD_OPEN.kicker}
         </p>
 
@@ -120,7 +153,7 @@ export function ColdOpen() {
           </p>
           <a
             href="#moment"
-            className="co-frame inline-flex flex-col items-center gap-2 text-xs tracking-[0.2em] text-foreground/50 uppercase transition-colors hover:text-foreground"
+            className="co-frame inline-flex flex-col items-center gap-2 text-xs tracking-[0.2em] text-foreground/70 uppercase transition-colors hover:text-foreground"
           >
             {COLD_OPEN.scrollCue}
             <span aria-hidden className="animate-bounce">
@@ -129,6 +162,18 @@ export function ColdOpen() {
           </a>
         </div>
       </div>
+
+      {/* Sound toggle for the background video (starts muted for autoplay). */}
+      <button
+        type="button"
+        onClick={toggleSound}
+        aria-label={soundOn ? "Mute background video" : "Play background video sound"}
+        aria-pressed={soundOn}
+        className="absolute right-5 bottom-5 z-20 inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-background/40 py-2 pr-3.5 pl-3 text-xs font-medium tracking-wide text-foreground/80 backdrop-blur-md transition-colors hover:bg-background/70 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none md:right-8 md:bottom-8"
+      >
+        {soundOn ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
+        <span className="hidden sm:inline">{soundOn ? "Sound on" : "Sound off"}</span>
+      </button>
     </section>
   );
 }

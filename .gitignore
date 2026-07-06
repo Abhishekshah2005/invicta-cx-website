@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# stray source asset (the used copy lives in /public/hero-video.mp4)
+/Hero video.mp4
