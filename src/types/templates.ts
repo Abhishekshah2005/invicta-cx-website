@@ -22,6 +22,10 @@ export interface TemplateHero {
   lead?: string;
   /** Art-direction note for the intended photograph (until real assets land). */
   imageLabel?: string;
+  /** Real backdrop photo (public path). Rendered under the cinematic gradient. */
+  image?: string;
+  /** CSS object-position for the backdrop (e.g. "center", "60% center"). */
+  imageFocus?: string;
   /** Primary hero call-to-action (magnetic button). */
   cta?: LinkAction;
   /** Optional secondary hero call-to-action (outline button). */

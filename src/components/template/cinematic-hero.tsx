@@ -2,7 +2,9 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
+import { cn } from "@/lib/utils";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { prefersReducedMotion } from "@/utils/dom";
 import { Container } from "@/layouts/container";
@@ -54,7 +56,19 @@ export function CinematicHero({ crumbs, hero }: CinematicHeroProps) {
     >
       {/* Background — parallax layer (over-sized so the scrub never exposes edges). */}
       <div ref={media} aria-hidden className="absolute inset-x-0 -top-[14%] h-[128%]">
-        <div className="absolute inset-0 bg-background" />
+        {hero.image ? (
+          <Image
+            src={hero.image}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: hero.imageFocus ?? "center" }}
+          />
+        ) : null}
+        {/* Ink veil — full when no photo; a dark grade over the photo when present. */}
+        <div className={cn("absolute inset-0 bg-background", hero.image && "opacity-[0.62]")} />
         <div
           className="absolute inset-0"
           style={{
