@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 import { Volume2, VolumeX } from "lucide-react";
 
 import { gsap, useGSAP } from "@/lib/gsap";
@@ -51,8 +52,24 @@ export function ColdOpen() {
         gsap.set(q(".co-text"), { clipPath: "inset(0 0 0 0)" });
         gsap.set(q(".co-bubble"), { opacity: 1, y: 0 });
         gsap.set(q(".co-tag"), { opacity: 1, y: 0 });
+        gsap.set(".co-video", { opacity: 1 });
         return;
       }
+
+      // Hero media: smooth fade of the video in over the poster, plus a very
+      // slow breathing zoom on the whole media layer.
+      gsap.fromTo(
+        ".co-video",
+        { opacity: 0 },
+        { opacity: 1, duration: 1.6, ease: "power2.out", delay: 0.15 },
+      );
+      gsap.to(".co-media", {
+        scale: 1.12,
+        duration: 20,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+      });
 
       gsap.to(network, { opacity: 0.36, duration: 1.6 });
       gsap.set(convos, { opacity: 0 });
@@ -105,31 +122,48 @@ export function ColdOpen() {
   return (
     <section
       ref={scope}
-      className="dark relative min-h-svh overflow-hidden bg-background text-foreground"
+      className="dark relative min-h-[100svh] overflow-hidden bg-background text-foreground md:min-h-[90vh]"
     >
-      {/* Ambient background video — deepest layer, dimmed so the network and
-          copy stay legible over it. */}
-      <video
-        ref={videoRef}
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-60"
-        autoPlay
-        muted={!soundOn}
-        loop
-        playsInline
+      {/* Full-bleed hero media. The poster paints instantly (LCP) and the video
+          fades in over it; both are cropped to centre so the vertical mobile
+          viewport gets a dedicated crop. Full quality — darkening comes from the
+          40% overlay, never from dimming the footage. */}
+      <div className="co-media pointer-events-none absolute inset-0 will-change-transform">
+        <Image
+          src="/hero-poster.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <video
+          ref={videoRef}
+          className="co-video absolute inset-0 h-full w-full object-cover object-center opacity-0"
+          autoPlay
+          muted={!soundOn}
+          loop
+          playsInline
+          aria-hidden
+          preload="auto"
+          poster="/hero-poster.jpg"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+      {/* 40% dark overlay for legibility */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-black/40" />
+      {/* Subtle film grain */}
+      <div
         aria-hidden
-        preload="metadata"
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-      </video>
-      {/* Only a whisper of tint — the footage stays clear. Legibility comes from
-          the copy's own shadow (below), not from dimming the video. */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-background/25" />
+        className="pointer-events-none absolute inset-0 noise-overlay opacity-[0.06]"
+      />
 
       <div className="co-network pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_35%,transparent_82%)]">
         <ConversationNetwork />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-svh max-w-lg flex-col items-center justify-center gap-10 px-6 [text-shadow:0_1px_18px_rgba(0,0,0,0.9)]">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-lg flex-col items-center justify-center gap-10 px-6 [text-shadow:0_1px_18px_rgba(0,0,0,0.9)] md:min-h-[90vh]">
         <p className="co-frame font-mono text-xs tracking-[0.25em] text-foreground/80 uppercase">
           {COLD_OPEN.kicker}
         </p>
