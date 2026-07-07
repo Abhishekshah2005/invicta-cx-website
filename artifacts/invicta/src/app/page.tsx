@@ -11,6 +11,7 @@ import {
   TheMoment,
   ThePeople,
   TheProof,
+  TheWorld,
 } from "@/sections";
 
 export const metadata: Metadata = createMetadata({
@@ -33,6 +34,7 @@ export default function HomePage() {
         <ThePeople />
         <TheArena />
         <TheLayer />
+        <TheWorld />
         <TheIndex />
         <TheProof />
         <TheInvitation />

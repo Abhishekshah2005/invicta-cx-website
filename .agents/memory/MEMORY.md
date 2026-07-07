@@ -1,0 +1,1 @@
+- [WebGL in R3F](webgl-r3f-pattern.md) — probe WebGL support before mounting Canvas; ErrorBoundary alone won't catch context failures (they occur in effects, not render)

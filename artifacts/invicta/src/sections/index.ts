@@ -3,6 +3,7 @@ export { TheMoment } from "./the-moment";
 export { ThePeople } from "./the-people";
 export { TheArena } from "./the-arena";
 export { TheLayer } from "./the-layer";
+export { TheWorld } from "./the-world";
 export { TheIndex } from "./the-index";
 export { TheProof } from "./the-proof";
 export { TheInvitation } from "./the-invitation";
