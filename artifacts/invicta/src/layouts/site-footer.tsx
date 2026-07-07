@@ -116,7 +116,7 @@ export function SiteFooter() {
       <div className="relative border-t border-foreground/10 overflow-hidden">
         {/* Multi-industry business background */}
         <img
-          src="/assets/footer/signoff-bg.png"
+          src="/assets/footer/signoff-collage.png"
           alt=""
           aria-hidden
           className="pointer-events-none absolute inset-0 h-full w-full object-cover"
