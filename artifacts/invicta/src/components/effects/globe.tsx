@@ -125,7 +125,7 @@ function GlobeImpl() {
 
         /* Atmosphere */
         showAtmosphere
-        atmosphereColor="#6688ff"
+        atmosphereColor="#cc2233"
         atmosphereAltitude={0.18}
 
         /* Animated flight arcs */
