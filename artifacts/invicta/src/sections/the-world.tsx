@@ -19,10 +19,10 @@ export function TheWorld() {
   return (
     <Section className="dark bg-background text-foreground overflow-hidden">
       <Container>
-        <div className="grid items-center gap-16 lg:grid-cols-[5fr_7fr] lg:gap-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[5fr_7fr] lg:gap-20">
 
           {/* ── LEFT: editorial copy + country list ── */}
-          <div className="flex flex-col gap-10 lg:py-8">
+          <div className="flex flex-col gap-8 lg:gap-10 lg:py-8">
 
             <div className="flex flex-col gap-5">
               <Reveal>
@@ -71,31 +71,33 @@ export function TheWorld() {
           </div>
 
           {/* ── RIGHT: 3D globe ── */}
-          <Reveal className="relative flex items-center justify-center">
-            {/* Soft radial glow behind globe */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 rounded-full"
-              style={{
-                background:
-                  "radial-gradient(circle at 50% 50%, rgba(180,20,30,0.18) 0%, rgba(30,10,60,0.12) 45%, transparent 72%)",
-              }}
-            />
+          <Reveal className="flex items-center justify-center overflow-hidden">
+            <div className="relative w-full max-w-[min(100vw-2rem,420px)] sm:max-w-[480px] lg:max-w-[600px] mx-auto">
+              {/* Soft radial glow behind globe */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 rounded-full"
+                style={{
+                  background:
+                    "radial-gradient(circle at 50% 50%, rgba(180,20,30,0.18) 0%, rgba(30,10,60,0.12) 45%, transparent 72%)",
+                }}
+              />
 
-            {/* Outer halo ring */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-[5%] rounded-full border border-brand/10"
-            />
+              {/* Outer halo ring */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-[5%] rounded-full border border-brand/10"
+              />
 
-            <div className="aspect-square w-full max-w-[600px]">
-              <ClientOnly
-                fallback={
-                  <div className="aspect-square w-full rounded-full border border-foreground/10 bg-foreground/[0.03]" />
-                }
-              >
-                <GlobeCanvas />
-              </ClientOnly>
+              <div className="aspect-square w-full">
+                <ClientOnly
+                  fallback={
+                    <div className="aspect-square w-full rounded-full border border-foreground/10 bg-foreground/[0.03]" />
+                  }
+                >
+                  <GlobeCanvas />
+                </ClientOnly>
+              </div>
             </div>
           </Reveal>
 
