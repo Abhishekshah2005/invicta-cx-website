@@ -112,12 +112,13 @@ function GlobeImpl() {
   if (!GlobeComponent) return null;
 
   return (
-    <div ref={containerRef} style={{ width: "100%", aspectRatio: "1 / 1" }}>
+    <div ref={containerRef} style={{ width: "100%", aspectRatio: "1 / 1", background: "#1a0008" }}>
       <GlobeComponent
         ref={globeRef}
         width={size}
         height={size}
         onGlobeReady={handleGlobeReady}
+        backgroundColor="rgba(26,0,8,1)"
 
         /* Globe surface — night Earth with city lights */
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
@@ -126,7 +127,7 @@ function GlobeImpl() {
         /* Atmosphere */
         showAtmosphere
         atmosphereColor="#cc2233"
-        atmosphereAltitude={0.18}
+        atmosphereAltitude={0.25}
 
         /* Animated flight arcs */
         arcsData={ARCS}
