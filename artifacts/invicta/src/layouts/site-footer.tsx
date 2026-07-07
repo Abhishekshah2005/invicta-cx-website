@@ -20,8 +20,16 @@ export function SiteFooter() {
     <footer className="dark relative overflow-hidden bg-background text-foreground">
 
       {/* ── 1. PRE-FOOTER CTA ─────────────────────────────────────────── */}
-      <div className="border-t border-foreground/10">
-        <Container className="py-20 md:py-28">
+      <div className="relative border-t border-foreground/10 overflow-hidden">
+        {/* City-at-night background */}
+        <img
+          src="/assets/footer/cta-bg.png"
+          alt=""
+          aria-hidden
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-25"
+        />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/40" />
+        <Container className="relative z-10 py-20 md:py-28">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="flex flex-col gap-3">
               <p className="font-mono text-xs tracking-[0.2em] text-brand uppercase">
@@ -105,15 +113,39 @@ export function SiteFooter() {
       </div>
 
       {/* ── 4. BRAND SIGN-OFF ─────────────────────────────────────────── */}
-      <div className="border-t border-foreground/10">
-        <Container className="pt-16 pb-10 md:pt-20 md:pb-12">
+      <div className="relative border-t border-foreground/10 overflow-hidden">
+        {/* Majestic horse — the signature image */}
+        <img
+          src="/assets/footer/signoff-bg.png"
+          alt=""
+          aria-hidden
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-50"
+          style={{ objectPosition: "70% center" }}
+        />
+        {/* Gradient overlay: full black on left (where logo sits), fades right */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.80) 40%, rgba(0,0,0,0.40) 70%, rgba(0,0,0,0.20) 100%)",
+          }}
+        />
+        {/* Top gradient so it blends with the section above */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-24"
+          style={{ background: "linear-gradient(to bottom, #0a0a0a 0%, transparent 100%)" }}
+        />
+
+        <Container className="relative z-10 pt-16 pb-10 md:pt-20 md:pb-12">
           <Reveal>
             {/* Tagline */}
-            <p className="max-w-sm text-base text-foreground/40">{FOOTER.tagline}</p>
+            <p className="max-w-sm text-base text-foreground/50">{FOOTER.tagline}</p>
 
             {/* Large wordmark */}
             <div className="mt-8 mb-10">
-              <Logo className="h-20 md:h-32 opacity-90" />
+              <Logo className="h-20 md:h-32 opacity-95" />
             </div>
 
             {/* Legal bar */}

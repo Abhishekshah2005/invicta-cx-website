@@ -14,9 +14,19 @@ import { INVITATION } from "@/content/home";
 export function TheInvitation() {
   return (
     <section className="dark relative overflow-hidden bg-background section-y-lg text-foreground">
+      {/* Cinematic operations centre background */}
+      <img
+        src="/assets/home/invitation-bg.png"
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
+      />
+      {/* Dark overlay so text stays legible */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-background/75" />
+
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_25%,transparent_75%)] opacity-60"
+        className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_25%,transparent_75%)] opacity-50"
       >
         <ConversationNetwork count={64} />
       </div>

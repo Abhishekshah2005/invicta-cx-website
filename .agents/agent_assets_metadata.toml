@@ -1074,3 +1074,21 @@ id = "SVv2jJw40yF944CX9GALF"
 uri = "file://attached_assets/generated_images/cinematic_editorial_photography_a_d8c8.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "TV_9xuKeSmuQWsyIysm6Y"
+uri = "file://artifacts/invicta/public/assets/home/invitation-bg.png"
+type = "image"
+title = "invitation section bg"
+
+[[generated]]
+id = "CdLy9fpieCXJxo53-BbJB"
+uri = "file://artifacts/invicta/public/assets/footer/cta-bg.png"
+type = "image"
+title = "footer cta bg"
+
+[[generated]]
+id = "wONBUyCHuEPBmDFqYKN_1"
+uri = "file://artifacts/invicta/public/assets/footer/signoff-bg.png"
+type = "image"
+title = "footer logo signoff horse bg"
