@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { PAGE_META } from "@/lib/routes";
 import { Container } from "@/layouts/container";
@@ -9,18 +9,110 @@ import { cn } from "@/lib/utils";
 
 const meta = PAGE_META.contact!;
 
+/* ── Brand SVG Icons ──────────────────────────────────────────────────── */
+
+function IconPhone() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="size-6">
+      <rect width="24" height="24" rx="6" fill="#25D366" />
+      <path
+        d="M7.5 4.5h3l1.5 3.75-1.875 1.125A10.5 10.5 0 0 0 13.625 12.375L14.75 10.5 18.5 12v3A1.5 1.5 0 0 1 17 16.5C9.544 16.5 4.5 11.456 4.5 4a1.5 1.5 0 0 1 1.5-1.5h1.5z"
+        fill="white"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function IconEmail() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="size-6">
+      <rect width="24" height="24" rx="6" fill="#EA4335" />
+      <path d="M4 7l8 5.5L20 7" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+      <rect x="4" y="7" width="16" height="11" rx="1" stroke="white" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+function IconGoogleMaps() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-6" fill="none">
+      <rect width="24" height="24" rx="6" fill="white" />
+      {/* Map pin shape */}
+      <path
+        d="M12 3C9.24 3 7 5.24 7 8c0 4.25 5 10 5 10s5-5.75 5-10c0-2.76-2.24-5-5-5z"
+        fill="#EA4335"
+      />
+      <circle cx="12" cy="8" r="2" fill="white" />
+      {/* Google "G" colour stripe at bottom */}
+      <path d="M5 18h3l1 2H5z" fill="#FBBC05" />
+      <path d="M8 18h3l-1 2H8z" fill="#34A853" />
+      <path d="M11 18h3l-1 2h-3z" fill="#4285F4" />
+      <path d="M14 18h3l-1 2h-2z" fill="#EA4335" />
+    </svg>
+  );
+}
+
+function IconInstagram() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-6">
+      <defs>
+        <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+          <stop offset="0%" stopColor="#fdf497" />
+          <stop offset="5%" stopColor="#fdf497" />
+          <stop offset="45%" stopColor="#fd5949" />
+          <stop offset="60%" stopColor="#d6249f" />
+          <stop offset="90%" stopColor="#285AEB" />
+        </radialGradient>
+      </defs>
+      <rect width="24" height="24" rx="6" fill="url(#ig-grad)" />
+      <rect x="6" y="6" width="12" height="12" rx="3.5" stroke="white" strokeWidth="1.5" fill="none" />
+      <circle cx="12" cy="12" r="3" stroke="white" strokeWidth="1.5" fill="none" />
+      <circle cx="16.5" cy="7.5" r="1" fill="white" />
+    </svg>
+  );
+}
+
+function IconLinkedIn() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-6">
+      <rect width="24" height="24" rx="4" fill="#0A66C2" />
+      <path
+        d="M7 9h2v8H7zM8 8a1.25 1.25 0 1 1 0-2.5A1.25 1.25 0 0 1 8 8zM11 9h1.9v1.1h.03C13.25 9.4 14.1 9 15.2 9 17.3 9 18 10.3 18 12.2V17h-2v-4.3c0-.8-.01-1.9-1.15-1.9-1.16 0-1.34.9-1.34 1.84V17H11V9z"
+        fill="white"
+      />
+    </svg>
+  );
+}
+
+function IconFacebook() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-6">
+      <rect width="24" height="24" rx="4" fill="#1877F2" />
+      <path
+        d="M15 8h-1.5C13.1 8 13 8.4 13 9v1.5h2l-.3 2H13V18h-2v-5.5H9.5v-2H11V9c0-1.9 1.1-3 3-3H15v2z"
+        fill="white"
+      />
+    </svg>
+  );
+}
+
+/* ── Card data ────────────────────────────────────────────────────────── */
+
 interface ContactCard {
-  icon: React.ElementType;
+  BrandIcon: () => JSX.Element;
   label: string;
   value: string;
   description: string;
   href: string;
   image: string;
   external?: boolean;
+  actionLabel: string;
 }
 
 interface SocialCard {
-  icon: React.ElementType;
+  BrandIcon: () => JSX.Element;
   label: string;
   handle: string;
   description: string;
@@ -30,23 +122,25 @@ interface SocialCard {
 
 const CONTACT_CHANNELS: ContactCard[] = [
   {
-    icon: Phone,
+    BrandIcon: IconPhone,
     label: "Phone",
     value: "+91 7777077049",
-    description: "Call us directly — we answer.",
+    description: "Call us directly — we answer every call personally.",
     href: "tel:+917777077049",
     image: "/assets/contact/phone.png",
+    actionLabel: "Call now",
   },
   {
-    icon: Mail,
+    BrandIcon: IconEmail,
     label: "Email",
     value: "darshan@invictaindia.in",
     description: "Drop us a line anytime and we'll respond within the hour.",
     href: "mailto:darshan@invictaindia.in",
     image: "/assets/contact/email.png",
+    actionLabel: "Send email",
   },
   {
-    icon: MapPin,
+    BrandIcon: IconGoogleMaps,
     label: "Office",
     value: "Madgaon, Goa 403601",
     description:
@@ -54,12 +148,13 @@ const CONTACT_CHANNELS: ContactCard[] = [
     href: "https://maps.google.com/?q=Noronha+Dias+Business+Complex+Madgaon+Goa+403601",
     image: "/assets/contact/office.png",
     external: true,
+    actionLabel: "Get directions",
   },
 ];
 
 const SOCIAL_LINKS: SocialCard[] = [
   {
-    icon: Instagram,
+    BrandIcon: IconInstagram,
     label: "Instagram",
     handle: "@invicta_esolutions",
     description: "Behind-the-scenes, team updates, and customer experience insights.",
@@ -67,7 +162,7 @@ const SOCIAL_LINKS: SocialCard[] = [
     image: "/assets/contact/instagram.png",
   },
   {
-    icon: Linkedin,
+    BrandIcon: IconLinkedIn,
     label: "LinkedIn",
     handle: "invicta-esolutions",
     description: "Industry perspectives, case studies, and company milestones.",
@@ -75,7 +170,7 @@ const SOCIAL_LINKS: SocialCard[] = [
     image: "/assets/contact/linkedin.png",
   },
   {
-    icon: Facebook,
+    BrandIcon: IconFacebook,
     label: "Facebook",
     handle: "invictaesolutionsindia",
     description: "Community stories, service announcements, and team moments.",
@@ -84,8 +179,10 @@ const SOCIAL_LINKS: SocialCard[] = [
   },
 ];
 
+/* ── Flip card components ─────────────────────────────────────────────── */
+
 function ContactFlipCard({ card }: { card: ContactCard }) {
-  const Icon = card.icon;
+  const { BrandIcon } = card;
   return (
     <div className="group block h-72 sm:h-80" style={{ perspective: "900px" }}>
       <div className="relative h-full w-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -100,11 +197,11 @@ function ContactFlipCard({ card }: { card: ContactCard }) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
           <div className="absolute inset-0 flex flex-col justify-between p-6">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/20 backdrop-blur-sm border border-brand/30">
-              <Icon className="size-5 text-brand" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm ring-1 ring-white/20">
+              <BrandIcon />
             </div>
             <div className="flex flex-col gap-1">
-              <p className="font-mono text-[10px] tracking-[0.2em] text-brand uppercase">
+              <p className="font-mono text-[10px] tracking-[0.2em] text-white/50 uppercase">
                 {card.label}
               </p>
               <h3 className="font-display text-lg font-medium text-white leading-snug">
@@ -120,16 +217,16 @@ function ContactFlipCard({ card }: { card: ContactCard }) {
           target={card.external ? "_blank" : undefined}
           rel={card.external ? "noopener noreferrer" : undefined}
           className={cn(
-            "group/back absolute inset-0 rounded-2xl border border-brand/25 bg-card",
+            "group/back absolute inset-0 rounded-2xl border border-border bg-card",
             "[backface-visibility:hidden] [transform:rotateY(180deg)]",
-            "flex flex-col gap-4 p-6 transition-colors hover:border-brand/50",
+            "flex flex-col gap-4 p-6 transition-colors hover:border-brand/40",
           )}
         >
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10">
-            <Icon className="size-5 text-brand" />
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-muted">
+            <BrandIcon />
           </div>
           <div className="flex flex-col gap-1 flex-1">
-            <p className="font-mono text-[10px] tracking-[0.2em] text-brand uppercase">
+            <p className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
               {card.label}
             </p>
             <p className="font-display text-base font-medium leading-snug">{card.value}</p>
@@ -138,7 +235,7 @@ function ContactFlipCard({ card }: { card: ContactCard }) {
             </p>
           </div>
           <div className="flex items-center gap-1.5 text-xs font-semibold text-brand">
-            {card.external ? "Get directions" : card.icon === Phone ? "Call now" : "Send email"}
+            {card.actionLabel}
             <ArrowUpRight className="size-3.5 transition-transform duration-200 group-hover/back:translate-x-0.5 group-hover/back:-translate-y-0.5" />
           </div>
         </a>
@@ -148,7 +245,7 @@ function ContactFlipCard({ card }: { card: ContactCard }) {
 }
 
 function SocialFlipCard({ card }: { card: SocialCard }) {
-  const Icon = card.icon;
+  const { BrandIcon } = card;
   return (
     <div className="group block h-72 sm:h-80" style={{ perspective: "900px" }}>
       <div className="relative h-full w-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -163,11 +260,11 @@ function SocialFlipCard({ card }: { card: SocialCard }) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
           <div className="absolute inset-0 flex flex-col justify-between p-6">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/20 backdrop-blur-sm border border-brand/30">
-              <Icon className="size-5 text-brand" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm ring-1 ring-white/20">
+              <BrandIcon />
             </div>
             <div className="flex flex-col gap-1">
-              <p className="font-mono text-[10px] tracking-[0.2em] text-brand uppercase">
+              <p className="font-mono text-[10px] tracking-[0.2em] text-white/50 uppercase">
                 {card.label}
               </p>
               <h3 className="font-display text-lg font-medium text-white leading-snug">
@@ -183,16 +280,16 @@ function SocialFlipCard({ card }: { card: SocialCard }) {
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "group/back absolute inset-0 rounded-2xl border border-brand/25 bg-card",
+            "group/back absolute inset-0 rounded-2xl border border-border bg-card",
             "[backface-visibility:hidden] [transform:rotateY(180deg)]",
-            "flex flex-col gap-4 p-6 transition-colors hover:border-brand/50",
+            "flex flex-col gap-4 p-6 transition-colors hover:border-brand/40",
           )}
         >
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10">
-            <Icon className="size-5 text-brand" />
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-muted">
+            <BrandIcon />
           </div>
           <div className="flex flex-col gap-1 flex-1">
-            <p className="font-mono text-[10px] tracking-[0.2em] text-brand uppercase">
+            <p className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
               {card.label}
             </p>
             <p className="font-display text-base font-medium leading-snug">{card.handle}</p>
@@ -209,6 +306,8 @@ function SocialFlipCard({ card }: { card: SocialCard }) {
     </div>
   );
 }
+
+/* ── Page ─────────────────────────────────────────────────────────────── */
 
 export default function ContactPage() {
   return (
@@ -262,7 +361,6 @@ export default function ContactPage() {
       <section className="dark bg-background section-y-lg text-foreground">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
-            {/* Left — copy */}
             <div className="flex flex-col gap-6">
               <Reveal>
                 <Eyebrow className="text-brand">What happens next</Eyebrow>
@@ -302,7 +400,6 @@ export default function ContactPage() {
               </Reveal>
             </div>
 
-            {/* Right — quick-facts */}
             <Reveal>
               <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/10">
                 {[
