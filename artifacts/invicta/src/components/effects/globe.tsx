@@ -20,17 +20,18 @@ class GlobeErrorBoundary extends Component<
 export interface Country {
   name: string;
   flag: string;
+  iso: string;
   lat: number;
   lng: number;
 }
 
 export const GLOBE_COUNTRIES: Country[] = [
-  { name: "India",          flag: "🇮🇳", lat:  20.59, lng:  78.96 },
-  { name: "UAE",            flag: "🇦🇪", lat:  23.42, lng:  53.85 },
-  { name: "United Kingdom", flag: "🇬🇧", lat:  55.38, lng:  -3.44 },
-  { name: "United States",  flag: "🇺🇸", lat:  38.00, lng: -97.00 },
-  { name: "Canada",         flag: "🇨🇦", lat:  56.13, lng:-106.35 },
-  { name: "Australia",      flag: "🇦🇺", lat: -25.27, lng: 133.78 },
+  { name: "India",          flag: "🇮🇳", iso: "in", lat:  20.59, lng:  78.96 },
+  { name: "UAE",            flag: "🇦🇪", iso: "ae", lat:  23.42, lng:  53.85 },
+  { name: "United Kingdom", flag: "🇬🇧", iso: "gb", lat:  55.38, lng:  -3.44 },
+  { name: "United States",  flag: "🇺🇸", iso: "us", lat:  38.00, lng: -97.00 },
+  { name: "Canada",         flag: "🇨🇦", iso: "ca", lat:  56.13, lng:-106.35 },
+  { name: "Australia",      flag: "🇦🇺", iso: "au", lat: -25.27, lng: 133.78 },
 ];
 
 /* ── Flight arcs (all pairs within our 6 markets) ──────────────── */

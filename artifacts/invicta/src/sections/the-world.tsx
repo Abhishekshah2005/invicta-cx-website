@@ -46,10 +46,18 @@ export function TheWorld() {
                 {GLOBE_COUNTRIES.map((c) => (
                   <li
                     key={c.name}
-                    className="flex items-center gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.04] px-4 py-3 transition-colors hover:border-brand/30"
+                    className="relative flex items-center gap-3 overflow-hidden rounded-xl border border-foreground/10 bg-foreground/[0.04] px-4 py-3 transition-colors hover:border-brand/30"
                   >
-                    <span className="text-2xl leading-none">{c.flag}</span>
-                    <span className="text-sm font-medium text-foreground">{c.name}</span>
+                    {/* Country map silhouette */}
+                    <img
+                      src={`https://cdn.jsdelivr.net/gh/djaiss/mapsicon@master/all/${c.iso}/vector.svg`}
+                      alt=""
+                      aria-hidden
+                      className="pointer-events-none absolute right-1 top-1/2 h-12 w-20 -translate-y-1/2 object-contain"
+                      style={{ filter: "brightness(0) invert(1)", opacity: 0.08 }}
+                    />
+                    <span className="relative z-10 text-2xl leading-none">{c.flag}</span>
+                    <span className="relative z-10 text-sm font-medium text-foreground">{c.name}</span>
                   </li>
                 ))}
               </ul>
