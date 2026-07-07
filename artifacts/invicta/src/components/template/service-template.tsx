@@ -31,7 +31,11 @@ export function ServiceTemplate({ content, crumbs }: { content: ServiceContent; 
     <PageShell>
       <CinematicHero crumbs={crumbs} hero={content.hero} />
       <Overview intro={content.overview.intro} paragraphs={content.overview.paragraphs} />
-      <ChallengeGrid intro={content.challenges.intro} items={content.challenges.items} />
+      <ChallengeGrid
+        intro={content.challenges.intro}
+        items={content.challenges.items}
+        image={content.hero.image}
+      />
       <ValueList intro={content.approach.intro} items={content.approach.points} />
       <ProcessSteps intro={content.workflow.intro} steps={content.workflow.steps} />
       <TechStack intro={content.technology.intro} groups={content.technology.groups} />

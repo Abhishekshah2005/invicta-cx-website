@@ -4,9 +4,12 @@ import { SectionHeading } from "@/components/section-heading";
 import { Reveal, RevealGroup } from "@/components/reveal";
 import { CHALLENGES } from "@/content/gaming";
 
+const GAMING_HERO_IMAGE = "/assets/industries/gaming/hero/hero.png";
+
 /**
  * The Arena — the pressures a gaming CX operation lives under. Dark register,
- * an editorial grid of pain points that shows we understand the business.
+ * 3-D flip cards: front shows the gaming hero image with a number + title
+ * overlay; back reveals the full challenge text.
  */
 export function GamingChallenges() {
   return (
@@ -22,16 +25,46 @@ export function GamingChallenges() {
         </Reveal>
 
         <RevealGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {CHALLENGES.items.map((item, i) => (
-            <article
-              key={item.title}
-              className="flex flex-col gap-3 rounded-2xl border border-border bg-card/40 p-6 transition-colors duration-300 hover:border-brand/30"
-            >
-              <span className="font-mono text-xs text-brand">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="font-display text-lg font-medium">{item.title}</h3>
-              <p className="text-sm text-pretty text-muted-foreground">{item.body}</p>
-            </article>
-          ))}
+          {CHALLENGES.items.map((item, i) => {
+            const num = String(i + 1).padStart(2, "0");
+            return (
+              <div
+                key={item.title}
+                className="group block h-64 sm:h-72"
+                style={{ perspective: "900px" }}
+              >
+                <div className="relative h-full w-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  {/* ── Front face ── */}
+                  <div className="absolute inset-0 rounded-2xl overflow-hidden [backface-visibility:hidden]">
+                    <img
+                      src={GAMING_HERO_IMAGE}
+                      alt={item.title}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/25" />
+                    <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
+                      <span className="font-mono text-xs tracking-[0.2em] text-brand">{num}</span>
+                      <h3 className="font-display text-lg font-medium text-white leading-snug">
+                        {item.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* ── Back face ── */}
+                  <div className="absolute inset-0 rounded-2xl border border-brand/25 bg-card/60 backdrop-blur-sm [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col gap-4 p-5 sm:p-6">
+                    <span className="font-mono text-xs tracking-[0.2em] text-brand">{num}</span>
+                    <h3 className="font-display text-base font-medium leading-snug text-foreground">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-pretty text-muted-foreground leading-relaxed">
+                      {item.body}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </RevealGroup>
       </Container>
     </Section>

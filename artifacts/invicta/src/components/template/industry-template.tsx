@@ -32,7 +32,11 @@ export function IndustryTemplate({
     <PageShell>
       <CinematicHero crumbs={crumbs} hero={content.hero} />
       <Overview intro={content.overview.intro} paragraphs={content.overview.paragraphs} />
-      <ChallengeGrid intro={content.challenges.intro} items={content.challenges.items} />
+      <ChallengeGrid
+        intro={content.challenges.intro}
+        items={content.challenges.items}
+        image={content.hero.image}
+      />
       <ValueList intro={content.whyInvicta.intro} items={content.whyInvicta.points} />
       <RelatedGrid
         intro={content.servicesUsed.intro}
