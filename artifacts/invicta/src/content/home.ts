@@ -361,6 +361,18 @@ export const INVITATION = {
 /* ── FOOTER ────────────────────────────────────────────────────────────── */
 
 export const FOOTER = {
+  cta: {
+    kicker: "Ready to deploy an elite operation?",
+    headline: "Talk to a specialist who already speaks your world.",
+    label: "Start a conversation",
+    href: "/contact",
+  },
+  metrics: [
+    { value: "<60s", label: "First response" },
+    { value: "24/7", label: "Global coverage" },
+    { value: "99%+", label: "CSAT sustained" },
+    { value: "14 days", label: "Average go-live" },
+  ],
   columns: [
     {
       heading: "Industries",
@@ -368,21 +380,41 @@ export const FOOTER = {
         { label: "Gaming & iGaming", href: "/industries/gaming" },
         { label: "FinTech", href: "/industries/fintech" },
         { label: "SaaS", href: "/industries/saas" },
+        { label: "Technology", href: "/industries/technology" },
         { label: "Healthcare", href: "/industries/healthcare" },
+        { label: "Travel & Hospitality", href: "/industries/travel" },
+        { label: "E-commerce", href: "/industries/ecommerce" },
+        { label: "Professional Services", href: "/industries/professional-services" },
       ],
     },
     {
-      heading: "Services",
+      heading: "Support Services",
       links: [
         { label: "Customer Support", href: "/services/customer-support" },
+        { label: "Live Chat", href: "/services/live-chat" },
+        { label: "Email Support", href: "/services/email-support" },
+        { label: "Phone Support", href: "/services/phone-support" },
+        { label: "Technical Support", href: "/services/technical-support" },
+        { label: "Omnichannel Support", href: "/services/omnichannel-support" },
+        { label: "Social Media Support", href: "/services/social-media-support" },
+      ],
+    },
+    {
+      heading: "Trust & Operations",
+      links: [
         { label: "KYC", href: "/services/kyc" },
+        { label: "Fraud Prevention", href: "/services/fraud-prevention" },
         { label: "VIP Management", href: "/services/vip-management" },
         { label: "Quality Assurance", href: "/services/quality-assurance" },
+        { label: "Workforce Management", href: "/services/workforce-management" },
+        { label: "Back Office Support", href: "/services/back-office" },
+        { label: "Knowledge Base", href: "/services/knowledge-base-management" },
       ],
     },
     {
       heading: "Company",
       links: [
+        { label: "About Invicta", href: "/about" },
         { label: "The Method", href: "/method" },
         { label: "Case Studies", href: "/case-studies" },
         { label: "Insights", href: "/insights" },
@@ -394,8 +426,9 @@ export const FOOTER = {
       links: [
         { label: "Talk to an Expert", href: "/contact" },
         { label: "LinkedIn", href: "#" },
-        { label: "Privacy", href: "/privacy" },
-        { label: "Terms", href: "/terms" },
+        { label: "Twitter / X", href: "#" },
+        { label: "Privacy Policy", href: "/privacy" },
+        { label: "Terms of Service", href: "/terms" },
       ],
     },
   ],
