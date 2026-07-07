@@ -35,18 +35,22 @@ export const customerRetention: ServiceContent = {
       {
         title: "Churn happens silently",
         body: "Most customers don't complain before they leave — they just stop, and by cancellation it's often too late.",
+        image: "/assets/services/customer-retention/challenges/01.png",
       },
       {
         title: "Saves are handled defensively",
         body: "Cancellation flows that only offer a discount leave real reasons — and better outcomes — on the table.",
+        image: "/assets/services/customer-retention/challenges/02.png",
       },
       {
         title: "Win-back is neglected",
         body: "Lapsed customers are warm leads, but few businesses systematically bring them back.",
+        image: "/assets/services/customer-retention/challenges/03.png",
       },
       {
         title: "Loyalty programs don't change behaviour",
         body: "Points nobody uses don't build loyalty; relationships do.",
+        image: "/assets/services/customer-retention/challenges/04.png",
       },
     ],
   },

@@ -35,18 +35,22 @@ export const emailSupport: ServiceContent = {
       {
         title: "Backlogs erode trust",
         body: "A queue that grows faster than it clears means slow replies and rising frustration.",
+        image: "/assets/services/email-support/challenges/01.png",
       },
       {
         title: "Shallow replies create rework",
         body: "Answers that don't fully resolve generate reopened tickets and repeat contacts.",
+        image: "/assets/services/email-support/challenges/02.png",
       },
       {
         title: "Tone is hard to hold in writing",
         body: "Without a voice, written replies drift into cold or robotic, exactly when empathy matters.",
+        image: "/assets/services/email-support/challenges/03.png",
       },
       {
         title: "Complex cases need real ownership",
         body: "Multi-step and sensitive issues stall when no one takes them end to end.",
+        image: "/assets/services/email-support/challenges/04.png",
       },
     ],
   },

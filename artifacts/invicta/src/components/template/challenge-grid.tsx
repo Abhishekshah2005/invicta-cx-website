@@ -10,7 +10,7 @@ interface ChallengeGridProps {
   /** Columns at `md`. Defaults to 3; use 2 for longer bodies. */
   columns?: 2 | 3;
   /**
-   * Optional hero image shown on the front face of every flip card.
+   * Fallback image used when an item has no `image` field of its own.
    * Typically `content.hero.image` from the parent template.
    */
   image?: string;
@@ -18,7 +18,7 @@ interface ChallengeGridProps {
 
 /**
  * Problem-framing grid — the "here's what's hard" section. 3-D flip cards:
- * front shows the page's hero photography with a numbered title overlay;
+ * front shows a unique per-challenge photograph with numbered title overlay;
  * back reveals the full challenge description. Shared by Industry "Challenges"
  * and Service "Business Challenges".
  */
@@ -32,20 +32,21 @@ export function ChallengeGrid({ intro, items, columns = 3, image }: ChallengeGri
             columns === 3 ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3" : "grid gap-4 md:grid-cols-2"
           }
         >
-          {items.map((item, index) =>
-            image ? (
-              <ChallengeFlipCard key={index} item={item} index={index} image={image} />
+          {items.map((item, index) => {
+            const src = item.image ?? image;
+            return src ? (
+              <ChallengeFlipCard key={index} item={item} index={index} image={src} />
             ) : (
               <ChallengePlainCard key={index} item={item} index={index} />
-            ),
-          )}
+            );
+          })}
         </RevealGroup>
       </Container>
     </Section>
   );
 }
 
-/** Flip card variant — used when a hero image is available. */
+/** Flip card variant — used when an image is available. */
 function ChallengeFlipCard({
   item,
   index,
@@ -57,10 +58,7 @@ function ChallengeFlipCard({
 }) {
   const num = String(index + 1).padStart(2, "0");
   return (
-    <div
-      className="group block h-64 sm:h-72"
-      style={{ perspective: "900px" }}
-    >
+    <div className="group block h-64 sm:h-72" style={{ perspective: "900px" }}>
       <div className="relative h-full w-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* ── Front face ── */}
         <div className="absolute inset-0 rounded-2xl overflow-hidden [backface-visibility:hidden]">

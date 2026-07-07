@@ -35,18 +35,22 @@ export const customerSupport: ServiceContent = {
       {
         title: "Speed and quality feel like a trade-off",
         body: "Push for faster and quality drops; push for thorough and queues build. Most teams never solve both at once.",
+        image: "/assets/services/customer-support/challenges/01.png",
       },
       {
         title: "Consistency slips as you scale",
         body: "The more people answer, the more tone and accuracy vary — and inconsistency erodes trust fast.",
+        image: "/assets/services/customer-support/challenges/02.png",
       },
       {
         title: "Hiring never keeps up with demand",
         body: "Growth, launches, and seasonality spike volume faster than in-house recruiting and training can react.",
+        image: "/assets/services/customer-support/challenges/03.png",
       },
       {
         title: "Channels fragment the experience",
         body: "Chat, email, phone, and social in separate silos means customers repeat themselves and context gets lost.",
+        image: "/assets/services/customer-support/challenges/04.png",
       },
     ],
   },

@@ -35,18 +35,22 @@ export const knowledgeBaseManagement: ServiceContent = {
       {
         title: "Content goes stale fast",
         body: "Products change; articles don't. Wrong answers are worse than none.",
+        image: "/assets/services/knowledge-base-management/challenges/01.png",
       },
       {
         title: "Customers can't find answers",
         body: "Poor structure and search mean people give up and raise a ticket anyway.",
+        image: "/assets/services/knowledge-base-management/challenges/02.png",
       },
       {
         title: "Agents reinvent answers",
         body: "Without a trusted internal knowledge base, agents improvise and consistency suffers.",
+        image: "/assets/services/knowledge-base-management/challenges/03.png",
       },
       {
         title: "No one owns it",
         body: "Knowledge work is always someone's side project, so it never gets done well.",
+        image: "/assets/services/knowledge-base-management/challenges/04.png",
       },
     ],
   },

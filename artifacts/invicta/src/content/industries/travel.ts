@@ -39,22 +39,27 @@ export const travel: IndustryContent = {
       {
         title: "Problems arrive at the worst possible time",
         body: "Disruption clusters at night, on weekends, and during holidays — exactly when in-house teams are thinnest.",
+        image: "/assets/industries/travel/challenges/01.png",
       },
       {
         title: "Travellers are stressed and need ownership",
         body: "A stranded customer doesn't want a ticket number. They want someone to take charge and make it right, now.",
+        image: "/assets/industries/travel/challenges/02.png",
       },
       {
         title: "Language and timezone gaps break trust",
         body: "Global customers expect help in their language, on their clock. Gaps feel like being abandoned abroad.",
+        image: "/assets/industries/travel/challenges/03.png",
       },
       {
         title: "Peak season overwhelms everything",
         body: "Holidays and events multiply volume overnight, and understaffing during a peak is when loyalty is lost fastest.",
+        image: "/assets/industries/travel/challenges/04.png",
       },
       {
         title: "One bad trip becomes a public review",
         body: "In a category driven by ratings, a single mishandled disruption can outweigh a hundred smooth journeys.",
+        image: "/assets/industries/travel/challenges/05.png",
       },
     ],
   },

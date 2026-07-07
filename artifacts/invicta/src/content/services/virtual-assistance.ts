@@ -35,18 +35,22 @@ export const virtualAssistance: ServiceContent = {
       {
         title: "Senior time lost to low-value tasks",
         body: "Scheduling and inbox triage drain hours from people who should be doing more.",
+        image: "/assets/services/virtual-assistance/challenges/01.png",
       },
       {
         title: "Coordination falls through cracks",
         body: "Without someone owning it, follow-ups, bookings, and details get dropped.",
+        image: "/assets/services/virtual-assistance/challenges/02.png",
       },
       {
         title: "Hiring in-house is slow and costly",
         body: "A full-time assistant is a big commitment for variable, part-time needs.",
+        image: "/assets/services/virtual-assistance/challenges/03.png",
       },
       {
         title: "Consistency is hard with ad-hoc help",
         body: "Occasional or rotating support never learns your preferences well enough.",
+        image: "/assets/services/virtual-assistance/challenges/04.png",
       },
     ],
   },

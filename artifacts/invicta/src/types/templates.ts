@@ -43,6 +43,8 @@ export interface SectionIntro {
 export interface TitledPoint {
   title: string;
   body: string;
+  /** Optional image path shown on the front face of a flip card. */
+  image?: string;
 }
 
 /** An ordered step in a process / workflow / implementation section. */

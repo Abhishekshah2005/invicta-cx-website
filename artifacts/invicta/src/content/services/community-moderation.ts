@@ -35,18 +35,22 @@ export const communityModeration: ServiceContent = {
       {
         title: "Volume outpaces in-house teams",
         body: "User content and reports scale faster than a small internal team can review.",
+        image: "/assets/services/community-moderation/challenges/01.png",
       },
       {
         title: "Policy nuance defeats automation",
         body: "Context, sarcasm, and edge cases need human judgement that filters alone miss.",
+        image: "/assets/services/community-moderation/challenges/02.png",
       },
       {
         title: "Bad content spreads fast",
         body: "Harmful posts left up for minutes can reach thousands and damage trust.",
+        image: "/assets/services/community-moderation/challenges/03.png",
       },
       {
         title: "Moderation is emotionally demanding",
         body: "Reviewing difficult content sustainably requires trained, supported people.",
+        image: "/assets/services/community-moderation/challenges/04.png",
       },
     ],
   },

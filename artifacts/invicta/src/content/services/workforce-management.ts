@@ -35,18 +35,22 @@ export const workforceManagement: ServiceContent = {
       {
         title: "Peaks blow up SLAs",
         body: "Under-forecast a surge and queues, wait times, and CSAT all collapse at once.",
+        image: "/assets/services/workforce-management/challenges/01.png",
       },
       {
         title: "Overstaffing burns budget",
         body: "Cover sized for the peak sits idle in the quiet hours, wasting money.",
+        image: "/assets/services/workforce-management/challenges/02.png",
       },
       {
         title: "Schedules drift from reality",
         body: "A plan built weeks ago rarely matches the day that actually shows up.",
+        image: "/assets/services/workforce-management/challenges/03.png",
       },
       {
         title: "Shrinkage is invisible until it hurts",
         body: "Absence, breaks, and admin quietly erode the coverage you thought you had.",
+        image: "/assets/services/workforce-management/challenges/04.png",
       },
     ],
   },

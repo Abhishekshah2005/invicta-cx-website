@@ -35,18 +35,22 @@ export const kyc: ServiceContent = {
       {
         title: "Friction kills conversion",
         body: "Every extra verification step at signup leaks legitimate, revenue-generating customers.",
+        image: "/assets/services/kyc/challenges/01.png",
       },
       {
         title: "Automation misses the edge cases",
         body: "Poor document quality, mismatches, and clever fraud need human review, not just OCR.",
+        image: "/assets/services/kyc/challenges/02.png",
       },
       {
         title: "Compliance is unforgiving",
         body: "Age, identity, and AML obligations must be met and documented, every time.",
+        image: "/assets/services/kyc/challenges/03.png",
       },
       {
         title: "Volume is spiky",
         body: "Campaigns and launches surge signups, and slow verification stalls the whole funnel.",
+        image: "/assets/services/kyc/challenges/04.png",
       },
     ],
   },

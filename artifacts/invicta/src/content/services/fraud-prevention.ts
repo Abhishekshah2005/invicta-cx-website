@@ -35,18 +35,22 @@ export const fraudPrevention: ServiceContent = {
       {
         title: "Fraud mutates weekly",
         body: "New tactics outrun static rules; you need people reading the signals as they shift.",
+        image: "/assets/services/fraud-prevention/challenges/01.png",
       },
       {
         title: "False positives cost customers",
         body: "Every legitimate transaction wrongly blocked is revenue and trust lost.",
+        image: "/assets/services/fraud-prevention/challenges/02.png",
       },
       {
         title: "Chargebacks and disputes pile up",
         body: "Reviewing and contesting them is labour-intensive and easy to fall behind on.",
+        image: "/assets/services/fraud-prevention/challenges/03.png",
       },
       {
         title: "Compliance adds weight",
         body: "AML obligations mean fraud work has to be documented and defensible.",
+        image: "/assets/services/fraud-prevention/challenges/04.png",
       },
     ],
   },

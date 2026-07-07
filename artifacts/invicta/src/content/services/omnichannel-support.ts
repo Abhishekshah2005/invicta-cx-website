@@ -35,18 +35,22 @@ export const omnichannelSupport: ServiceContent = {
       {
         title: "Customers repeat themselves",
         body: "Switching channels means re-explaining the issue, which feels like being ignored.",
+        image: "/assets/services/omnichannel-support/challenges/01.png",
       },
       {
         title: "Context gets lost",
         body: "Without shared history, each channel starts from zero and quality suffers.",
+        image: "/assets/services/omnichannel-support/challenges/02.png",
       },
       {
         title: "Tone varies by channel",
         body: "Separate teams for chat, email, and social drift apart in voice and standards.",
+        image: "/assets/services/omnichannel-support/challenges/03.png",
       },
       {
         title: "Coverage gaps by channel",
         body: "One channel staffed while another goes dark sends customers in circles.",
+        image: "/assets/services/omnichannel-support/challenges/04.png",
       },
     ],
   },

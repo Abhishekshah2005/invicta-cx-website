@@ -39,22 +39,27 @@ export const saas: IndustryContent = {
       {
         title: "Churn hides inside support quality",
         body: "Customers rarely announce they're leaving. Slow or shallow help is the leading indicator you can actually control.",
+        image: "/assets/industries/saas/challenges/01.png",
       },
       {
         title: "Tier-2 questions overwhelm generalists",
         body: "Real product issues need people who understand the software. Untrained agents just escalate everything to engineering.",
+        image: "/assets/industries/saas/challenges/02.png",
       },
       {
         title: "Engineers become a support queue",
         body: "When frontline support can't resolve, your most expensive people get pulled off the roadmap to answer tickets.",
+        image: "/assets/industries/saas/challenges/03.png",
       },
       {
         title: "Scaling support lags scaling users",
         body: "Every growth spurt, launch, or enterprise deal spikes volume, and hiring and training in-house never keeps pace.",
+        image: "/assets/industries/saas/challenges/04.png",
       },
       {
         title: "Brand voice slips under pressure",
         body: "As volume climbs, tone and consistency are the first casualties — right when customer perception matters most.",
+        image: "/assets/industries/saas/challenges/05.png",
       },
     ],
   },

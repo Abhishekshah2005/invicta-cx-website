@@ -39,22 +39,27 @@ export const fintech: IndustryContent = {
       {
         title: "Onboarding friction costs real customers",
         body: "Every extra step in KYC leaks good applicants. Too few, and fraud and regulators arrive together. The line between the two is judgement, not just a rules engine.",
+        image: "/assets/industries/fintech/challenges/01.png",
       },
       {
         title: "Fraud never stops evolving",
         body: "Account takeover, synthetic identities, mule networks, and chargeback abuse mutate weekly. Static controls age fast; you need people reading the patterns in real time.",
+        image: "/assets/industries/fintech/challenges/02.png",
       },
       {
         title: "Customers expect calm certainty",
         body: "When a payment fails or an account is frozen, tone matters as much as resolution. Panic met with a script becomes a complaint — or a regulator's inbox.",
+        image: "/assets/industries/fintech/challenges/03.png",
       },
       {
         title: "Compliance is non-negotiable and always watching",
         body: "AML, sanctions screening, data residency, and audit trails aren't features you bolt on. Every interaction has to be defensible after the fact.",
+        image: "/assets/industries/fintech/challenges/04.png",
       },
       {
         title: "Volume is spiky and unforgiving",
         body: "Paydays, market events, product launches, and outages all concentrate demand. Understaffing during a spike is when trust is lost the fastest.",
+        image: "/assets/industries/fintech/challenges/05.png",
       },
     ],
   },

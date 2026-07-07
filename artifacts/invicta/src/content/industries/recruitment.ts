@@ -39,22 +39,27 @@ export const recruitment: IndustryContent = {
       {
         title: "Silence loses great candidates",
         body: "A day without a reply is a day a competitor gets ahead. Ghosted candidates don't just leave — they warn others.",
+        image: "/assets/industries/recruitment/challenges/01.png",
       },
       {
         title: "Coordination is a full-time job",
         body: "Scheduling across panels, timezones, and reschedules devours recruiter hours that should go into evaluating people.",
+        image: "/assets/industries/recruitment/challenges/02.png",
       },
       {
         title: "Volume spikes are brutal",
         body: "A campaign, a launch, or a seasonal ramp can multiply applications overnight, and quality of experience is the first thing to crack.",
+        image: "/assets/industries/recruitment/challenges/03.png",
       },
       {
         title: "Employer brand is fragile and public",
         body: "One poor candidate experience becomes a public review that quietly raises the cost of every future hire.",
+        image: "/assets/industries/recruitment/challenges/04.png",
       },
       {
         title: "Onboarding starts before day one",
         body: "The gap between offer and start date is where new hires wobble. Warm, proactive contact keeps them committed.",
+        image: "/assets/industries/recruitment/challenges/05.png",
       },
     ],
   },

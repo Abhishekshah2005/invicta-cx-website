@@ -35,18 +35,22 @@ export const liveChat: ServiceContent = {
       {
         title: "Slow replies kill the moment",
         body: "In chat, a minute feels like an age. Delay and the visitor closes the tab or the sale.",
+        image: "/assets/services/live-chat/challenges/01.png",
       },
       {
         title: "Concurrency strains quality",
         body: "Handling several chats at once without dropping tone or accuracy takes real training, not just a widget.",
+        image: "/assets/services/live-chat/challenges/02.png",
       },
       {
         title: "Coverage gaps lose sales",
         body: "Chat offline during peak hours or off-hours is conversion left on the table.",
+        image: "/assets/services/live-chat/challenges/03.png",
       },
       {
         title: "Generic answers don't convert",
         body: "Canned responses feel robotic; real recommendations require product knowledge and judgement.",
+        image: "/assets/services/live-chat/challenges/04.png",
       },
     ],
   },

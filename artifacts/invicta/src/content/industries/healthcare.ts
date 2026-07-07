@@ -39,22 +39,27 @@ export const healthcare: IndustryContent = {
       {
         title: "Anxious patients need reassurance, not scripts",
         body: "A worried caller met with a rigid decision tree feels dismissed. Sensitivity and judgement can't be automated away.",
+        image: "/assets/industries/healthcare/challenges/01.png",
       },
       {
         title: "No-shows and admin drain clinical capacity",
         body: "Scheduling, reminders, rescheduling, and coverage questions pull expensive clinical staff away from care they should be delivering.",
+        image: "/assets/industries/healthcare/challenges/02.png",
       },
       {
         title: "Privacy is sacred and heavily regulated",
         body: "Protected health information demands strict handling. One careless interaction is a breach, a complaint, and a loss of trust at once.",
+        image: "/assets/industries/healthcare/challenges/03.png",
       },
       {
         title: "Care doesn't keep office hours",
         body: "Questions and worries arrive at night, on weekends, and across timezones. Gaps in cover become gaps in trust.",
+        image: "/assets/industries/healthcare/challenges/04.png",
       },
       {
         title: "Fragmented systems slow everything down",
         body: "Scheduling, records, and messaging often live in separate tools, and every hand-off is a chance to lose the patient or the detail.",
+        image: "/assets/industries/healthcare/challenges/05.png",
       },
     ],
   },

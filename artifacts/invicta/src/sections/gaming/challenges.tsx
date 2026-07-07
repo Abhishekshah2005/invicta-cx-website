@@ -4,12 +4,10 @@ import { SectionHeading } from "@/components/section-heading";
 import { Reveal, RevealGroup } from "@/components/reveal";
 import { CHALLENGES } from "@/content/gaming";
 
-const GAMING_HERO_IMAGE = "/assets/industries/gaming/hero/hero.png";
-
 /**
  * The Arena — the pressures a gaming CX operation lives under. Dark register,
- * 3-D flip cards: front shows the gaming hero image with a number + title
- * overlay; back reveals the full challenge text.
+ * unique image per challenge card. Front: cinematic photo + number + title.
+ * Back: full challenge description text.
  */
 export function GamingChallenges() {
   return (
@@ -27,6 +25,7 @@ export function GamingChallenges() {
         <RevealGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {CHALLENGES.items.map((item, i) => {
             const num = String(i + 1).padStart(2, "0");
+            const image = `/assets/industries/gaming/challenges/${String(i + 1).padStart(2, "0")}.png`;
             return (
               <div
                 key={item.title}
@@ -37,7 +36,7 @@ export function GamingChallenges() {
                   {/* ── Front face ── */}
                   <div className="absolute inset-0 rounded-2xl overflow-hidden [backface-visibility:hidden]">
                     <img
-                      src={GAMING_HERO_IMAGE}
+                      src={image}
                       alt={item.title}
                       className="h-full w-full object-cover"
                       loading="lazy"

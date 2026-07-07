@@ -35,18 +35,22 @@ export const technicalSupport: ServiceContent = {
       {
         title: "Generalists escalate everything",
         body: "Without real product knowledge, agents become a routing layer that dumps load on engineering.",
+        image: "/assets/services/technical-support/challenges/01.png",
       },
       {
         title: "Engineers get pulled off the roadmap",
         body: "Every unresolved ticket that reaches your best people is roadmap time lost.",
+        image: "/assets/services/technical-support/challenges/02.png",
       },
       {
         title: "Reproductions are messy",
         body: "Vague bug reports waste engineering hours chasing issues they can't recreate.",
+        image: "/assets/services/technical-support/challenges/03.png",
       },
       {
         title: "Expertise is slow to scale",
         body: "Technical talent is hard to hire and train, so cover never keeps up with growth.",
+        image: "/assets/services/technical-support/challenges/04.png",
       },
     ],
   },

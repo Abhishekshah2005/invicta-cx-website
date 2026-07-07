@@ -35,18 +35,22 @@ export const appointmentSetting: ServiceContent = {
       {
         title: "Interest cools between yes and booked",
         body: "Every hour of delay after 'sure, let's talk' lowers the odds it ever happens.",
+        image: "/assets/services/appointment-setting/challenges/01.png",
       },
       {
         title: "Coordination eats time",
         body: "Back-and-forth across calendars and timezones is a job in itself.",
+        image: "/assets/services/appointment-setting/challenges/02.png",
       },
       {
         title: "No-shows waste prime slots",
         body: "Unconfirmed meetings that don't happen burn your team's most valuable time.",
+        image: "/assets/services/appointment-setting/challenges/03.png",
       },
       {
         title: "Unqualified meetings drain the team",
         body: "Booking anyone who'll say yes fills the calendar with the wrong conversations.",
+        image: "/assets/services/appointment-setting/challenges/04.png",
       },
     ],
   },

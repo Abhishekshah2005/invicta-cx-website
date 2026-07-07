@@ -35,18 +35,22 @@ export const leadGeneration: ServiceContent = {
       {
         title: "Unqualified leads waste sales time",
         body: "Handing closers cold, ill-fit names burns your most valuable hours.",
+        image: "/assets/services/lead-generation/challenges/01.png",
       },
       {
         title: "Generic outreach gets ignored",
         body: "Untargeted, impersonal messages train prospects to tune you out.",
+        image: "/assets/services/lead-generation/challenges/02.png",
       },
       {
         title: "Prospecting distracts your closers",
         body: "Salespeople doing their own research spend less time actually selling.",
+        image: "/assets/services/lead-generation/challenges/03.png",
       },
       {
         title: "Inconsistent effort, inconsistent pipeline",
         body: "Outreach that starts and stops produces a lumpy, unreliable funnel.",
+        image: "/assets/services/lead-generation/challenges/04.png",
       },
     ],
   },

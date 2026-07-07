@@ -35,18 +35,22 @@ export const paymentSupport: ServiceContent = {
       {
         title: "Errors erode trust instantly",
         body: "A wrong charge or mishandled refund is the fastest way to lose a customer's confidence.",
+        image: "/assets/services/payment-support/challenges/01.png",
       },
       {
         title: "Failed payments quietly churn customers",
         body: "Involuntary churn from expired cards and failed renewals leaks revenue you could recover.",
+        image: "/assets/services/payment-support/challenges/02.png",
       },
       {
         title: "Disputes and chargebacks pile up",
         body: "Handling them properly is detailed, deadline-driven work that's easy to fall behind on.",
+        image: "/assets/services/payment-support/challenges/03.png",
       },
       {
         title: "Emotion runs high",
         body: "Money conversations need calm and clarity, not a defensive script.",
+        image: "/assets/services/payment-support/challenges/04.png",
       },
     ],
   },

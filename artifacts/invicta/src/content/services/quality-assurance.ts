@@ -35,18 +35,22 @@ export const qualityAssurance: ServiceContent = {
       {
         title: "Quality is assumed, not measured",
         body: "Teams trust that service is good until a spike in complaints proves otherwise.",
+        image: "/assets/services/quality-assurance/challenges/01.png",
       },
       {
         title: "Coaching lacks evidence",
         body: "Feedback without scored examples is opinion, and it rarely changes behaviour.",
+        image: "/assets/services/quality-assurance/challenges/02.png",
       },
       {
         title: "Standards drift as teams grow",
         body: "The more people answer, the more tone and accuracy diverge.",
+        image: "/assets/services/quality-assurance/challenges/03.png",
       },
       {
         title: "Sampling misses the real picture",
         body: "Reviewing a handful of interactions by gut feel doesn't reflect the whole operation.",
+        image: "/assets/services/quality-assurance/challenges/04.png",
       },
     ],
   },

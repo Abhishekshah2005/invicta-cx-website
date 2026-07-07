@@ -39,22 +39,27 @@ export const technology: IndustryContent = {
       {
         title: "Users churn when support can't keep up",
         body: "A confident user hitting a wall of scripted answers loses faith in the product itself, not just the help desk.",
+        image: "/assets/industries/technology/challenges/01.png",
       },
       {
         title: "Tier-2 issues need genuine expertise",
         body: "Integration failures, device faults, and edge-case bugs demand people who understand the technology, not a keyword search.",
+        image: "/assets/industries/technology/challenges/02.png",
       },
       {
         title: "Platforms attract abuse and risk",
         body: "Any product with users, content, or transactions draws spam, abuse, and bad actors that threaten everyone else's experience.",
+        image: "/assets/industries/technology/challenges/03.png",
       },
       {
         title: "Scaling expertise is slow and costly",
         body: "Technical talent is expensive and hard to hire, and in-house teams can't ramp fast enough for launches and growth.",
+        image: "/assets/industries/technology/challenges/04.png",
       },
       {
         title: "Reputation is set in public",
         body: "Reviews, forums, and app stores turn every poor interaction into a permanent, searchable mark against you.",
+        image: "/assets/industries/technology/challenges/05.png",
       },
     ],
   },

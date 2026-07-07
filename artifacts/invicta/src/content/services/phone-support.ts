@@ -35,18 +35,22 @@ export const phoneSupport: ServiceContent = {
       {
         title: "Every call is live and unscripted",
         body: "There's no draft, no undo. Composure and judgement have to be real-time.",
+        image: "/assets/services/phone-support/challenges/01.png",
       },
       {
         title: "Emotion runs highest here",
         body: "People call when they're stressed or frustrated; de-escalation is a skill, not a script.",
+        image: "/assets/services/phone-support/challenges/02.png",
       },
       {
         title: "Coverage is expensive to staff",
         body: "Peaks, after-hours, and multilingual needs make in-house voice cover costly and rigid.",
+        image: "/assets/services/phone-support/challenges/03.png",
       },
       {
         title: "Wait times destroy goodwill",
         body: "Nothing erodes trust faster than a long hold for an urgent problem.",
+        image: "/assets/services/phone-support/challenges/04.png",
       },
     ],
   },

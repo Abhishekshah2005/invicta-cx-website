@@ -35,18 +35,22 @@ export const socialMediaSupport: ServiceContent = {
       {
         title: "Everything is public",
         body: "A slow or tone-deaf reply is visible to everyone and screenshots forever.",
+        image: "/assets/services/social-media-support/challenges/01.png",
       },
       {
         title: "Speed expectations are brutal",
         body: "On social, hours feel like days; silence during a flare-up amplifies it.",
+        image: "/assets/services/social-media-support/challenges/02.png",
       },
       {
         title: "Channels and formats multiply",
         body: "Comments, DMs, mentions, reviews — across several platforms — fragment attention.",
+        image: "/assets/services/social-media-support/challenges/03.png",
       },
       {
         title: "Crises escalate fast",
         body: "A single issue can snowball into a pile-on before an unstaffed team even notices.",
+        image: "/assets/services/social-media-support/challenges/04.png",
       },
     ],
   },

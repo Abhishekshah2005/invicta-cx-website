@@ -35,18 +35,22 @@ export const backOffice: ServiceContent = {
       {
         title: "Admin buries skilled people",
         body: "Expensive front-office staff lose hours to processing that doesn't need their expertise.",
+        image: "/assets/services/back-office/challenges/01.png",
       },
       {
         title: "Backlogs stall the front office",
         body: "When back-office work falls behind, customer-facing processes stall with it.",
+        image: "/assets/services/back-office/challenges/02.png",
       },
       {
         title: "Errors compound downstream",
         body: "A data mistake early on becomes a customer problem — or a compliance one — later.",
+        image: "/assets/services/back-office/challenges/03.png",
       },
       {
         title: "Volume is relentless and spiky",
         body: "Steady work punctuated by peaks is hard to staff efficiently in-house.",
+        image: "/assets/services/back-office/challenges/04.png",
       },
     ],
   },

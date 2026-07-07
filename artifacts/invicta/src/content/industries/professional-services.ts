@@ -39,22 +39,27 @@ export const professionalServices: IndustryContent = {
       {
         title: "Billable experts are stuck on admin",
         body: "Coordination, scheduling, and routine client questions pull your most expensive people away from the work clients actually pay for.",
+        image: "/assets/industries/professional-services/challenges/01.png",
       },
       {
         title: "Responsiveness sets the perception",
         body: "In relationship businesses, a slow or clumsy reply reads as a lack of care, whatever the quality of the eventual work.",
+        image: "/assets/industries/professional-services/challenges/02.png",
       },
       {
         title: "Discretion is non-negotiable",
         body: "Client matters are sensitive and confidential. Support has to be handled with the same discretion as the engagement itself.",
+        image: "/assets/industries/professional-services/challenges/03.png",
       },
       {
         title: "Inconsistency erodes the premium",
         body: "When response quality varies by who happens to pick up, the polished, reliable brand you sell starts to wobble.",
+        image: "/assets/industries/professional-services/challenges/04.png",
       },
       {
         title: "Growth strains the personal touch",
         body: "As a firm scales, the boutique attentiveness that won early clients gets harder to sustain across every relationship.",
+        image: "/assets/industries/professional-services/challenges/05.png",
       },
     ],
   },

@@ -39,22 +39,27 @@ export const ecommerce: IndustryContent = {
       {
         title: "Slow answers are lost sales",
         body: "A pre-sale question that waits is a cart that empties. Speed at the point of intent is revenue you can see or watch leave.",
+        image: "/assets/industries/ecommerce/challenges/01.png",
       },
       {
         title: "Post-purchase problems decide loyalty",
         body: "Returns, delays, and mix-ups are where repeat customers are made or lost — and repeat rate is what makes the model profitable.",
+        image: "/assets/industries/ecommerce/challenges/02.png",
       },
       {
         title: "Peak season breaks fragile operations",
         body: "Black Friday and holidays multiply volume overnight, and understaffed support turns a sales peak into a review crisis.",
+        image: "/assets/industries/ecommerce/challenges/03.png",
       },
       {
         title: "Reviews and ratings are ruthless",
         body: "One mishandled order becomes a public one-star that quietly suppresses conversion for everyone who reads it.",
+        image: "/assets/industries/ecommerce/challenges/04.png",
       },
       {
         title: "Brand voice is hard to hold at scale",
         body: "As volume climbs, consistency slips, and generic support erodes the brand you spent so much to build.",
+        image: "/assets/industries/ecommerce/challenges/05.png",
       },
     ],
   },

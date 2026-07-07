@@ -35,18 +35,22 @@ export const vipManagement: ServiceContent = {
       {
         title: "Top customers get generic service",
         body: "Lost in a standard queue, your most valuable customers feel like a number.",
+        image: "/assets/services/vip-management/challenges/01.png",
       },
       {
         title: "Support is reactive, not proactive",
         body: "Waiting for VIPs to complain misses the chance to deepen the relationship.",
+        image: "/assets/services/vip-management/challenges/02.png",
       },
       {
         title: "Churn among VIPs is expensive",
         body: "Losing a high-value customer costs far more than losing an average one.",
+        image: "/assets/services/vip-management/challenges/03.png",
       },
       {
         title: "Personal attention is hard to scale",
         body: "Dedicated managers are costly to hire and hard to staff consistently.",
+        image: "/assets/services/vip-management/challenges/04.png",
       },
     ],
   },

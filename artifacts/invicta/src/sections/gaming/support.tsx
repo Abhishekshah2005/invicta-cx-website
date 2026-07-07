@@ -1,14 +1,10 @@
-import { Mail, MessageCircle, Phone, Users, Wrench, type LucideIcon } from "lucide-react";
-
 import { Section } from "@/layouts/section";
 import { Container } from "@/layouts/container";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal, RevealGroup } from "@/components/reveal";
 import { SUPPORT } from "@/content/gaming";
 
-const ICONS: LucideIcon[] = [MessageCircle, Mail, Phone, Wrench, Users];
-
-/** End-to-end player support channels. Light register. */
+/** End-to-end player support channels. Light register. Flip cards with unique channel images. */
 export function GamingSupport() {
   return (
     <Section className="bg-muted/40">
@@ -24,18 +20,44 @@ export function GamingSupport() {
 
         <RevealGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SUPPORT.channels.map((channel, i) => {
-            const Icon = ICONS[i] ?? MessageCircle;
+            const image = `/assets/industries/gaming/support/${String(i + 1).padStart(2, "0")}.png`;
+            const num = String(i + 1).padStart(2, "0");
             return (
-              <article
+              <div
                 key={channel.title}
-                className="flex flex-col gap-4 rounded-2xl border border-border bg-background p-7 transition-colors duration-300 hover:border-foreground/20"
+                className="group block h-64 sm:h-72"
+                style={{ perspective: "900px" }}
               >
-                <span className="flex size-10 items-center justify-center rounded-xl bg-brand/10 text-brand">
-                  <Icon className="size-5" />
-                </span>
-                <h3 className="font-display text-lg font-medium">{channel.title}</h3>
-                <p className="text-sm text-pretty text-muted-foreground">{channel.body}</p>
-              </article>
+                <div className="relative h-full w-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  {/* ── Front face ── */}
+                  <div className="absolute inset-0 rounded-2xl overflow-hidden [backface-visibility:hidden]">
+                    <img
+                      src={image}
+                      alt={channel.title}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                    <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
+                      <span className="font-mono text-xs tracking-[0.2em] text-brand">{num}</span>
+                      <h3 className="font-display text-lg font-medium text-white leading-snug">
+                        {channel.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* ── Back face ── */}
+                  <div className="absolute inset-0 rounded-2xl border border-border bg-background [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col gap-4 p-5 sm:p-6">
+                    <span className="font-mono text-xs tracking-[0.2em] text-brand">{num}</span>
+                    <h3 className="font-display text-base font-medium leading-snug">
+                      {channel.title}
+                    </h3>
+                    <p className="text-sm text-pretty text-muted-foreground leading-relaxed">
+                      {channel.body}
+                    </p>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </RevealGroup>
