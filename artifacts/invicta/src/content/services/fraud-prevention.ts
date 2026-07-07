@@ -9,7 +9,7 @@ export const fraudPrevention: ServiceContent = {
     lead: "Invicta runs human-led fraud defence — transaction monitoring, multi-accounting and chargeback review, and AML support that catches bad actors while letting good customers through.",
     imageLabel:
       "A risk analyst studying flagged transactions with focus, secure workspace, cool light — documentary.",
-    image: "/assets/services/fraud-prevention/hero/hero.jpg",
+    image: "/assets/services/fraud-prevention/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

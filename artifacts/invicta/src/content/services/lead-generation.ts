@@ -9,7 +9,7 @@ export const leadGeneration: ServiceContent = {
     lead: "Invicta runs human-verified outbound and qualification — research, outreach, and conversations that put genuinely interested, sales-ready prospects in front of your team.",
     imageLabel:
       "An outbound specialist mid-conversation, energetic and sharp, modern office light — editorial.",
-    image: "/assets/services/lead-generation/hero/hero.jpg",
+    image: "/assets/services/lead-generation/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

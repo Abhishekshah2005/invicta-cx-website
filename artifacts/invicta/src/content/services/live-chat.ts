@@ -9,7 +9,7 @@ export const liveChat: ServiceContent = {
     lead: "Invicta runs real-time chat that converts browsers into buyers and defuses problems before they escalate — staffed by fast, on-brand specialists.",
     imageLabel:
       "A specialist typing quickly on a live-chat interface, calm and sharp, bright modern light — editorial.",
-    image: "/assets/services/live-chat/hero/hero.jpg",
+    image: "/assets/services/live-chat/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

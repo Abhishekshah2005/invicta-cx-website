@@ -9,7 +9,7 @@ export const omnichannelSupport: ServiceContent = {
     lead: "Invicta unifies chat, email, phone, and social into a single, context-aware experience — so customers never repeat themselves and your brand feels seamless everywhere.",
     imageLabel:
       "A specialist moving fluidly between chat, email, and voice on one screen, calm and connected — editorial.",
-    image: "/assets/services/omnichannel-support/hero/hero.jpg",
+    image: "/assets/services/omnichannel-support/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

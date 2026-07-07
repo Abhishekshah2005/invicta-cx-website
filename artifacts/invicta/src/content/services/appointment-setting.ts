@@ -9,7 +9,7 @@ export const appointmentSetting: ServiceContent = {
     lead: "Invicta turns interest into calendar appointments — qualifying, scheduling, and confirming meetings that actually happen, so your team walks into rooms worth being in.",
     imageLabel:
       "A coordinator booking a meeting on a calendar, confident and organised, bright light — editorial.",
-    image: "/assets/services/appointment-setting/hero/hero.jpg",
+    image: "/assets/services/appointment-setting/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

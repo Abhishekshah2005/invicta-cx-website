@@ -1,0 +1,212 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "xS_WpaEEgj7KhwUxBikao"
+uri = "file://artifacts/invicta/public/assets/home/people/people-01.png"
+type = "image"
+title = "editorial portrait woman desk"
+
+[[generated]]
+id = "rwcBt7aMZGaGRLPttfsOH"
+uri = "file://artifacts/invicta/public/assets/home/people/people-02.png"
+type = "image"
+title = "editorial portrait man whiteboard"
+
+[[generated]]
+id = "b6N2eBTdpcGhavO6k2569"
+uri = "file://artifacts/invicta/public/assets/home/people/people-03.png"
+type = "image"
+title = "editorial portrait woman headset luxury"
+
+[[generated]]
+id = "Jm5PWXUNajIp5-UVFkQv9"
+uri = "file://artifacts/invicta/public/assets/home/people/people-04.png"
+type = "image"
+title = "editorial team collaboration office"
+
+[[generated]]
+id = "0Nm7fnO_bSpz_FVkXUH9t"
+uri = "file://artifacts/invicta/public/assets/home/arena/arena.png"
+type = "image"
+title = "esports gaming operations arena"
+
+[[generated]]
+id = "9dNE3-QViFJsCw39PkexB"
+uri = "file://artifacts/invicta/public/assets/home/proof/lunaland.png"
+type = "image"
+title = "gaming company headquarters lobby"
+
+[[generated]]
+id = "nBvXb40FL_Le15WROtgxO"
+uri = "file://artifacts/invicta/public/assets/industries/gaming/hero/hero.png"
+type = "image"
+title = "gaming industry operations director"
+
+[[generated]]
+id = "pzobs8HeQ2OE3wl5rBkIL"
+uri = "file://artifacts/invicta/public/assets/industries/healthcare/hero/hero.png"
+type = "image"
+title = "healthcare administration professional"
+
+[[generated]]
+id = "eTzL9C8Iur5zo7l599m8l"
+uri = "file://artifacts/invicta/public/assets/industries/fintech/hero/hero.png"
+type = "image"
+title = "fintech executive office"
+
+[[generated]]
+id = "l4LLqNN__NvTIgeRriUvh"
+uri = "file://artifacts/invicta/public/assets/industries/technology/hero/hero.png"
+type = "image"
+title = "technology SaaS product office"
+
+[[generated]]
+id = "tMA0zyBpJbhhDSdrFDro-"
+uri = "file://artifacts/invicta/public/assets/industries/ecommerce/hero/hero.png"
+type = "image"
+title = "ecommerce director brand office"
+
+[[generated]]
+id = "gw3NGyppuvOZfOTYQIoCj"
+uri = "file://artifacts/invicta/public/assets/industries/recruitment/hero/hero.png"
+type = "image"
+title = "recruitment executive consultancy"
+
+[[generated]]
+id = "bf6RZwK6K4k4Jrkwfa7gD"
+uri = "file://artifacts/invicta/public/assets/industries/travel/hero/hero.png"
+type = "image"
+title = "travel concierge luxury agency"
+
+[[generated]]
+id = "N3z-1ofefQX2gDvQNyS-Z"
+uri = "file://artifacts/invicta/public/assets/industries/saas/hero/hero.png"
+type = "image"
+title = "saas customer success presentation"
+
+[[generated]]
+id = "jwT9qVYzSvttLrWzthlug"
+uri = "file://artifacts/invicta/public/assets/industries/professional-services/hero/hero.png"
+type = "image"
+title = "professional services law firm partner"
+
+[[generated]]
+id = "oN3miWDmhaonYoeuqDJ8J"
+uri = "file://artifacts/invicta/public/assets/services/customer-support/hero/hero.png"
+type = "image"
+title = "customer support specialist workspace"
+
+[[generated]]
+id = "8fYybbPC2pU11yAlpKjOr"
+uri = "file://artifacts/invicta/public/assets/services/live-chat/hero/hero.png"
+type = "image"
+title = "live chat professional hands keyboard"
+
+[[generated]]
+id = "Tb7yWBJfw8WUFEbNXTlyl"
+uri = "file://artifacts/invicta/public/assets/services/email-support/hero/hero.png"
+type = "image"
+title = "email support professional writing"
+
+[[generated]]
+id = "DNEB7HYrqeCoq9toZ4VuU"
+uri = "file://artifacts/invicta/public/assets/services/phone-support/hero/hero.png"
+type = "image"
+title = "phone support conversation office"
+
+[[generated]]
+id = "fgyvHumN61VXnyhumzjpZ"
+uri = "file://artifacts/invicta/public/assets/services/technical-support/hero/hero.png"
+type = "image"
+title = "technical support engineer dual monitors"
+
+[[generated]]
+id = "QjAr55ZHQFJIG3BgVvLXz"
+uri = "file://artifacts/invicta/public/assets/services/community-moderation/hero/hero.png"
+type = "image"
+title = "community moderation social media screens"
+
+[[generated]]
+id = "pzqID9pUXqnRtBdny0iA1"
+uri = "file://artifacts/invicta/public/assets/services/fraud-prevention/hero/hero.png"
+type = "image"
+title = "fraud prevention analyst secure operations"
+
+[[generated]]
+id = "Xh6nx9MT7spdQ2149XoMz"
+uri = "file://artifacts/invicta/public/assets/services/vip-management/hero/hero.png"
+type = "image"
+title = "VIP management luxury private client suite"
+
+[[generated]]
+id = "Kbj-CRWhT90Q-w8DDc4bU"
+uri = "file://artifacts/invicta/public/assets/services/appointment-setting/hero/hero.png"
+type = "image"
+title = "appointment setting calendar professional"
+
+[[generated]]
+id = "lU-P_GRbby-Hdrps-PUJJ"
+uri = "file://artifacts/invicta/public/assets/services/kyc/hero/hero.png"
+type = "image"
+title = "KYC compliance verification office"
+
+[[generated]]
+id = "L_rOFbnMj5vFx5ZZuV3Kd"
+uri = "file://artifacts/invicta/public/assets/services/lead-generation/hero/hero.png"
+type = "image"
+title = "lead generation sales professional CRM"
+
+[[generated]]
+id = "VGLNPKEnhsTEa1yDwWliX"
+uri = "file://artifacts/invicta/public/assets/services/quality-assurance/hero/hero.png"
+type = "image"
+title = "quality assurance call monitoring review"
+
+[[generated]]
+id = "7XrRFGZuMHQD1wzMcbfzo"
+uri = "file://artifacts/invicta/public/assets/services/back-office/hero/hero.png"
+type = "image"
+title = "back office operations professional documents"
+
+[[generated]]
+id = "oiSaaodKJmGiKwXKPAGwH"
+uri = "file://artifacts/invicta/public/assets/services/knowledge-base-management/hero/hero.png"
+type = "image"
+title = "knowledge base management documentation"
+
+[[generated]]
+id = "GkiOy4uyoFDyt8-SWvmod"
+uri = "file://artifacts/invicta/public/assets/services/omnichannel-support/hero/hero.png"
+type = "image"
+title = "omnichannel operations center dashboard"
+
+[[generated]]
+id = "Q6pYIJPk3s3R6yEO-5NmP"
+uri = "file://artifacts/invicta/public/assets/services/payment-support/hero/hero.png"
+type = "image"
+title = "payment support fintech professional"
+
+[[generated]]
+id = "h7kPnyey6kiU-jNvJQdg3"
+uri = "file://artifacts/invicta/public/assets/services/social-media-support/hero/hero.png"
+type = "image"
+title = "social media support creative workspace"
+
+[[generated]]
+id = "lKgIS_AY-SpMUqMh7rDj6"
+uri = "file://artifacts/invicta/public/assets/services/virtual-assistance/hero/hero.png"
+type = "image"
+title = "virtual assistant premium home office"
+
+[[generated]]
+id = "I2yy-uyHHwQF8qZ-8jPoi"
+uri = "file://artifacts/invicta/public/assets/services/workforce-management/hero/hero.png"
+type = "image"
+title = "workforce management planning operations"
+
+[[generated]]
+id = "05OGHfBVaTR7m6EPTqiQF"
+uri = "file://artifacts/invicta/public/assets/services/customer-retention/hero/hero.png"
+type = "image"
+title = "customer retention empathy video call"

@@ -9,7 +9,7 @@ export const virtualAssistance: ServiceContent = {
     lead: "Invicta provides trained virtual assistants for admin, coordination, inbox, and executive support — capable, reliable people who give your team its time back.",
     imageLabel:
       "A virtual assistant organising a busy schedule with calm focus, tidy workspace, warm light — editorial.",
-    image: "/assets/services/virtual-assistance/hero/hero.jpg",
+    image: "/assets/services/virtual-assistance/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

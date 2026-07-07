@@ -13,7 +13,7 @@ export const technology: IndustryContent = {
     lead: "Invicta runs technically fluent support and trust operations for technology businesses — resolving the hard tickets, protecting your platform, and keeping users confident in what you've built.",
     imageLabel:
       "A technical-support specialist troubleshooting across screens, composed and expert, cool daylight — documentary, premium.",
-    image: "/assets/industries/technology/hero/hero.jpg",
+    image: "/assets/industries/technology/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

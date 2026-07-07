@@ -13,7 +13,7 @@ export const professionalServices: IndustryContent = {
     lead: "Invicta provides discreet, white-glove client support for professional and B2B services — the polished, reliable first response that reflects the standard your firm is known for.",
     imageLabel:
       "A client-services professional in a refined office, composed and attentive, warm directional light — premium, understated, editorial.",
-    image: "/assets/industries/professional-services/hero/hero.jpg",
+    image: "/assets/industries/professional-services/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

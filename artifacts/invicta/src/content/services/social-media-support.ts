@@ -9,7 +9,7 @@ export const socialMediaSupport: ServiceContent = {
     lead: "Invicta runs on-brand social response and community care — replying, resolving, and engaging across every channel, in public and in DMs, fast enough to protect your reputation.",
     imageLabel:
       "A social specialist responding across brand channels on a phone and screen, quick and warm — editorial.",
-    image: "/assets/services/social-media-support/hero/hero.jpg",
+    image: "/assets/services/social-media-support/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

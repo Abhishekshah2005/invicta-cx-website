@@ -9,7 +9,7 @@ export const emailSupport: ServiceContent = {
     lead: "Invicta handles your email and ticket queue with accurate, on-tone written resolutions — the considered replies that settle complex and sensitive issues for good.",
     imageLabel:
       "A specialist composing a careful written reply, focused and calm, warm desk light — editorial.",
-    image: "/assets/services/email-support/hero/hero.jpg",
+    image: "/assets/services/email-support/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

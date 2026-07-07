@@ -9,7 +9,7 @@ export const kyc: ServiceContent = {
     lead: "Invicta runs rigorous, human-reviewed identity, age, and document verification that speeds legitimate customers through onboarding while keeping fraud and regulators satisfied.",
     imageLabel:
       "A verification specialist reviewing documents on a secure screen, careful and precise, cool light — documentary.",
-    image: "/assets/services/kyc/hero/hero.jpg",
+    image: "/assets/services/kyc/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

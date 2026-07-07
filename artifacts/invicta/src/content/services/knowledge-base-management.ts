@@ -9,7 +9,7 @@ export const knowledgeBaseManagement: ServiceContent = {
     lead: "Invicta builds and maintains help centres and internal knowledge that stay accurate, findable, and current — deflecting tickets and making every agent faster.",
     imageLabel:
       "A knowledge specialist structuring help articles on screen, methodical and clear, calm light — editorial.",
-    image: "/assets/services/knowledge-base-management/hero/hero.jpg",
+    image: "/assets/services/knowledge-base-management/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

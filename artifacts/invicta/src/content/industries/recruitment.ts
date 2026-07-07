@@ -13,7 +13,7 @@ export const recruitment: IndustryContent = {
     lead: "Invicta runs the candidate-facing side of hiring: fast responses, smooth coordination, and human follow-through that protects your employer brand at every stage.",
     imageLabel:
       "A recruitment coordinator mid-conversation, hopeful and warm, modern office in soft light — human, optimistic, editorial.",
-    image: "/assets/industries/recruitment/hero/hero.jpg",
+    image: "/assets/industries/recruitment/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

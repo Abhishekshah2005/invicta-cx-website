@@ -73,7 +73,13 @@ export function TemplateHero({ crumbs, hero, meta }: TemplateHeroProps) {
 
           {hasImage ? (
             <Reveal delay={0.1}>
-              <ImagePlaceholder tone="ink" ratio="4 / 3" label={hero.imageLabel!} />
+              <ImagePlaceholder
+                tone="ink"
+                ratio="4 / 3"
+                label={hero.imageLabel!}
+                src={hero.image}
+                focus={hero.imageFocus}
+              />
             </Reveal>
           ) : null}
         </div>

@@ -46,7 +46,7 @@ export function GamingCaseStudy() {
                 tone="crimson"
                 ratio="4 / 3"
                 label="Lunaland operations — a VIP account manager reviewing player insights on a premium dashboard. Editorial, warm, real."
-                src="/assets/home/proof/lunaland.jpg"
+                src="/assets/home/proof/lunaland.png"
               />
             </ImageReveal>
             <Reveal>

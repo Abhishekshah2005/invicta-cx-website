@@ -78,7 +78,7 @@ export function GamingHero() {
               tone="crimson"
               ratio="4 / 5"
               label={GAMING_HERO.imageLabel}
-              src="/assets/industries/gaming/hero/hero.jpg"
+              src="/assets/industries/gaming/hero/hero.png"
               className="shadow-xl"
             />
           </div>

@@ -1,0 +1,386 @@
+# INVICTA – COMPLETE PRODUCTION IMAGE GENERATION PASS
+
+You are now the Creative Director, Art Director, Production Photographer and Visual Designer for the entire Invicta website.
+
+Your task is to replace EVERY placeholder image, black rectangle, colored block, dummy image and temporary asset throughout the website with premium production-ready imagery.
+
+========================================================
+VERY IMPORTANT
+========================================================
+
+DO NOT MODIFY THE TWO EXISTING HERO VIDEOS.
+
+Keep both videos exactly as they are.
+
+Do not replace them.
+
+Do not crop them.
+
+Do not compress them.
+
+Do not regenerate them.
+
+Everything else on the website should be replaced with premium imagery.
+
+========================================================
+AUTOMATIC DISCOVERY
+========================================================
+
+Scan the ENTIRE project.
+
+Automatically detect every placeholder including:
+
+• black cards
+• red placeholder cards
+• temporary images
+• stock placeholders
+• empty cards
+• case study placeholders
+• insight thumbnails
+• service cards
+• industry cards
+• feature cards
+• process cards
+• testimonial cards
+• CTA images
+• section photography
+• editorial images
+• illustration placeholders
+
+Generate and replace ALL of them automatically.
+
+Do not ask for approval between images.
+
+========================================================
+VISUAL STYLE
+========================================================
+
+The website should feel like a premium editorial publication.
+
+References:
+
+Apple
+
+Stripe
+
+Hugo
+
+InTouchCX
+
+Notion
+
+Linear
+
+Aesop
+
+Pentagram
+
+NOT:
+
+Generic SaaS
+
+AI generated website
+
+Corporate stock photography
+
+Fake call centers
+
+Blue glowing technology
+
+Cyberpunk
+
+Robot imagery
+
+========================================================
+PHOTO STYLE
+========================================================
+
+Use only realistic photography.
+
+Natural daylight.
+
+Editorial composition.
+
+Soft shadows.
+
+Warm neutral tones.
+
+Luxury photography.
+
+Authentic human expressions.
+
+Real offices.
+
+Real workplaces.
+
+Real conversations.
+
+No exaggerated smiles.
+
+No people looking directly into camera.
+
+Every image should feel like it was photographed for the Invicta brand.
+
+========================================================
+CORE MESSAGE
+========================================================
+
+Invicta sells:
+
+Trust
+
+Human relationships
+
+Customer retention
+
+Operational excellence
+
+Specialists
+
+Problem solving
+
+Human support
+
+Every generated image must reinforce those themes.
+
+========================================================
+IMAGE GENERATION RULES
+========================================================
+
+Every section should receive its own unique photography.
+
+Never reuse the same person.
+
+Never reuse the same office.
+
+Never reuse the same composition.
+
+No duplicated images.
+
+No mirrored images.
+
+No slightly edited duplicates.
+
+Every image should tell a different story.
+
+========================================================
+INDUSTRY IMAGES
+========================================================
+
+Generate premium photography for:
+
+Gaming
+
+FinTech
+
+Healthcare
+
+Technology
+
+Recruitment
+
+Travel
+
+Hospitality
+
+Retail
+
+Professional Services
+
+SaaS
+
+Every image must visually represent that industry while still showing human support.
+
+========================================================
+SERVICE IMAGES
+========================================================
+
+Generate images for:
+
+Customer Support
+
+Live Chat
+
+Email Support
+
+Phone Support
+
+Technical Support
+
+Community Moderation
+
+Fraud Prevention
+
+VIP Support
+
+KYC
+
+Quality Assurance
+
+Appointment Setting
+
+Lead Generation
+
+Training
+
+Escalations
+
+Operations
+
+Customer Success
+
+Every service card should have its own unique image.
+
+========================================================
+CASE STUDIES
+========================================================
+
+Generate editorial cover photography.
+
+No logos.
+
+No screenshots.
+
+No UI mockups.
+
+Use premium documentary photography that matches each success story.
+
+========================================================
+INSIGHTS
+========================================================
+
+Generate magazine-quality editorial thumbnails.
+
+Every article should look like it belongs in Harvard Business Review or Fast Company.
+
+========================================================
+TESTIMONIALS
+========================================================
+
+Generate believable business portraits.
+
+Natural lighting.
+
+Real executives.
+
+No AI artifacts.
+
+========================================================
+CTA SECTIONS
+========================================================
+
+Replace placeholder artwork with cinematic editorial photography.
+
+========================================================
+IMAGE QUALITY
+========================================================
+
+Minimum quality:
+
+Ultra realistic
+
+8K quality
+
+Sharp
+
+Natural skin
+
+Natural clothing
+
+Premium lens
+
+Shallow depth of field
+
+Soft cinematic grading
+
+No AI artifacts
+
+========================================================
+AUTOMATIC INTEGRATION
+========================================================
+
+After generating each image:
+
+Optimize it.
+
+Convert to WebP/AVIF.
+
+Generate responsive versions.
+
+Generate blur placeholders.
+
+Replace the placeholder automatically.
+
+Update Next/Image.
+
+Maintain correct aspect ratios.
+
+========================================================
+RESPONSIVE
+========================================================
+
+Review every generated image on:
+
+Mobile
+
+Tablet
+
+Laptop
+
+Desktop
+
+Ultra-wide monitors
+
+Ensure no awkward cropping.
+
+Maintain focal points.
+
+========================================================
+VISUAL CONSISTENCY
+========================================================
+
+The entire website should look like one professional photoshoot.
+
+Not a collection of unrelated AI images.
+
+Every page should share the same:
+
+Lighting
+
+Color grading
+
+Composition
+
+Lens style
+
+Mood
+
+Editorial quality
+
+========================================================
+FINAL QA
+========================================================
+
+Run a full visual audit.
+
+Automatically detect:
+
+Placeholder images
+
+Broken images
+
+Duplicate imagery
+
+Low quality images
+
+Wrong crops
+
+Pixelation
+
+Composition issues
+
+Replace them automatically.
+
+Do not stop until EVERY placeholder on the website has been replaced except the two existing hero videos.
+
+The final website should feel like a $50,000–$100,000 agency production with consistent editorial photography throughout.

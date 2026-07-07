@@ -9,7 +9,7 @@ export const technicalSupport: ServiceContent = {
     lead: "Invicta staffs technically fluent specialists who fix the hard problems, protect your engineers' focus, and keep users confident in your product.",
     imageLabel:
       "A technical specialist troubleshooting across multiple screens, expert and composed, cool light — documentary.",
-    image: "/assets/services/technical-support/hero/hero.jpg",
+    image: "/assets/services/technical-support/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

@@ -9,7 +9,7 @@ export const workforceManagement: ServiceContent = {
     lead: "Invicta's workforce management forecasts demand, builds schedules, and steers coverage in real time — so SLAs hold through every peak without overstaffing the quiet hours.",
     imageLabel:
       "A WFM analyst reading live queue dashboards, sharp and calm, cool control-room light — documentary.",
-    image: "/assets/services/workforce-management/hero/hero.jpg",
+    image: "/assets/services/workforce-management/hero/hero.png",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },
