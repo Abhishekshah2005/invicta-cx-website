@@ -274,6 +274,18 @@
     outline-offset: 2px;
   }
 
+  /* SplitText line wrapper for masked headline reveals. Clips for the slide-up
+     effect, but pads the box so tight display line-heights don't shear the
+     serif's ascenders/descenders. Top padding is compensated by a negative
+     top margin (no layout shift); the small bottom pad adds harmless leading
+     that keeps g/y/p tails intact. */
+  .tr-line {
+    overflow: hidden;
+    padding-top: 0.14em;
+    padding-bottom: 0.22em;
+    margin-top: -0.14em;
+  }
+
   /* Honor reduced-motion at the platform level as a safety net. */
   @media (prefers-reduced-motion: reduce) {
     *,

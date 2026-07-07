@@ -35,7 +35,9 @@ export function textReveal(target: Element, options: TextRevealOptions = {}): Te
 
   const split = new SplitText(el, {
     type: splitBy,
-    linesClass: "overflow-hidden",
+    // `tr-line` clips for the slide-up mask but pads top/bottom so the serif's
+    // ascenders and descenders aren't cut (see globals.css).
+    linesClass: "tr-line",
     autoSplit: true,
   });
 
