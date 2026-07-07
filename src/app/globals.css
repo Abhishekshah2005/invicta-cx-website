@@ -46,9 +46,12 @@
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
 
-  /* Large-desktop breakpoint (1920px) → `3xl:` utilities. Complements Tailwind's
-     defaults (md 768 = tablet, lg 1024 = laptop, xl 1280, 2xl 1536). */
+  /* Large-desktop breakpoints. Complements Tailwind's defaults (md 768 = tablet,
+     lg 1024 = laptop, xl 1280, 2xl 1536). 3xl = 1920, 4xl = 2560 (4K/ultrawide),
+     5xl = 3440 (super-ultrawide) — used to reflow grids on very wide monitors. */
   --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 160rem;
+  --breakpoint-5xl: 214rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -120,6 +123,17 @@
    -------------------------------------------------------------------------- */
 :root {
   --radius: 0.625rem;
+
+  /* ── Fluid layout tokens ──────────────────────────────────────────────
+   * One centralized responsive system. Container widths grow naturally with
+   * the viewport (clamp: min → fluid → plateau) so mid-size screens read
+   * editorial and ultra-wide monitors fill intentionally — never a tiny
+   * column stranded in a sea of margin, never an over-stretched line length.
+   * Consumed via `max-w-[var(--container-*)]` and `px-[var(--gutter)]`. */
+  --container-content: clamp(60rem, 34rem + 38vw, 104rem);
+  --container-editorial: clamp(64rem, 34rem + 54vw, 144rem);
+  --container-wide: clamp(72rem, 42rem + 58vw, 150rem);
+  --gutter: clamp(1.25rem, 0.85rem + 1.8vw, 4rem);
 
   --background: oklch(0.988 0.005 85); /* ivory */
   --foreground: oklch(0.175 0.006 45); /* ink */

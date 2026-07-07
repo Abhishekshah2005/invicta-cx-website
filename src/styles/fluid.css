@@ -15,26 +15,26 @@
   --text-fluid-base--line-height: 1.6;
 
   /* Lead / large body */
-  --text-fluid-lg: clamp(1.15rem, 1.05rem + 0.45vw, 1.4rem);
+  --text-fluid-lg: clamp(1.15rem, 1.05rem + 0.45vw, 1.5rem);
   --text-fluid-lg--line-height: 1.5;
 
   /* Sub-headings */
-  --text-fluid-xl: clamp(1.45rem, 1.2rem + 1.05vw, 2.15rem);
+  --text-fluid-xl: clamp(1.45rem, 1.2rem + 1.05vw, 2.35rem);
   --text-fluid-xl--line-height: 1.15;
   --text-fluid-xl--letter-spacing: -0.01em;
 
   /* Section headings (h2) */
-  --text-fluid-2xl: clamp(1.85rem, 1.42rem + 1.9vw, 3.15rem);
+  --text-fluid-2xl: clamp(1.85rem, 1.42rem + 1.9vw, 3.5rem);
   --text-fluid-2xl--line-height: 1.1;
   --text-fluid-2xl--letter-spacing: -0.015em;
 
-  /* Hero headings (h1) — editorial, not oversized */
-  --text-fluid-3xl: clamp(2.4rem, 1.7rem + 3.1vw, 4.75rem);
+  /* Hero headings (h1) — editorial; keeps scaling on large/ultra-wide screens */
+  --text-fluid-3xl: clamp(2.4rem, 1.7rem + 3.1vw, 5.35rem);
   --text-fluid-3xl--line-height: 1.05;
   --text-fluid-3xl--letter-spacing: -0.02em;
 
   /* Reserved display size for rare full-bleed moments */
-  --text-fluid-display: clamp(3.25rem, 2.1rem + 5.4vw, 7.5rem);
+  --text-fluid-display: clamp(3.25rem, 2.1rem + 5.4vw, 8.5rem);
   --text-fluid-display--line-height: 1;
   --text-fluid-display--letter-spacing: -0.025em;
 }
@@ -45,4 +45,29 @@
 
 @utility text-pretty {
   text-wrap: pretty;
+}
+
+/* ── Global section rhythm ────────────────────────────────────────────────
+ * One fluid spacing scale for vertical section padding, so the whole site
+ * breathes on a single system (no ad-hoc py-* values). Tuned to the target
+ * bands — mobile 48–72, tablet 60–90, desktop 80–120 — and hard-capped well
+ * under 140px. Physical top/bottom (not padding-block) so `pt-0` / `!pt-*`
+ * overrides remain predictable.
+ *  - section-y     standard content sections (~47→108px)
+ *  - section-y-sm  dense / template content sections (~38→80px)
+ *  - section-y-lg  dark feature & CTA bands, a touch more presence (~56→128px)
+ */
+@utility section-y {
+  padding-top: clamp(2.75rem, 2rem + 4vw, 7.75rem);
+  padding-bottom: clamp(2.75rem, 2rem + 4vw, 7.75rem);
+}
+
+@utility section-y-sm {
+  padding-top: clamp(2.25rem, 1.7rem + 3vw, 5.75rem);
+  padding-bottom: clamp(2.25rem, 1.7rem + 3vw, 5.75rem);
+}
+
+@utility section-y-lg {
+  padding-top: clamp(3.25rem, 2.4rem + 4.6vw, 8.75rem);
+  padding-bottom: clamp(3.25rem, 2.4rem + 4.6vw, 8.75rem);
 }

@@ -21,7 +21,7 @@ export function TheIndex() {
           </TextReveal>
         </Reveal>
 
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
+        <div className="mx-auto grid max-w-[104rem] gap-16 lg:grid-cols-2 lg:gap-24">
           <Reveal>
             <IndexList
               kicker={INDEX.industries.kicker}

@@ -12,11 +12,13 @@ export const metadata: Metadata = createMetadata({
   path: ROUTES.caseStudies,
 });
 
-const items: CardItem[] = CASE_STUDIES.map((study) => ({
+const items: CardItem[] = CASE_STUDIES.map((study, _i, arr) => ({
   href: `${ROUTES.caseStudies}/${study.slug}`,
   label: study.label,
   description: study.description,
   meta: "Case Study",
+  // A lone case study reads as a full-width feature, not a stranded half-card.
+  featured: arr.length === 1,
 }));
 
 export default function CaseStudiesPage() {

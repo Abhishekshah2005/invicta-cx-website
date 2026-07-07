@@ -10,7 +10,7 @@ import { GAMING_CTA } from "@/content/gaming";
 /** Premium CTA — the invitation, over the living network. Dark. */
 export function GamingCta() {
   return (
-    <section className="dark relative overflow-hidden bg-background py-32 text-foreground md:py-44">
+    <section className="dark relative overflow-hidden bg-background section-y-lg text-foreground">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_25%,transparent_75%)] opacity-60"

@@ -12,7 +12,7 @@ import type { ArticleBlock } from "@/types/templates";
  */
 export function ArticleBody({ blocks }: { blocks: ArticleBlock[] }) {
   return (
-    <Section space="compact" className="pt-0">
+    <Section space="compact" className="pt-0!">
       <Container>
         <div className="mx-auto flex max-w-2xl flex-col gap-6">
           {blocks.map((block, index) => (

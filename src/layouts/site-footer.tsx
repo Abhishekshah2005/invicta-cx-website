@@ -15,7 +15,7 @@ export function SiteFooter() {
 
   return (
     <footer className="dark relative overflow-hidden bg-background text-foreground">
-      <Container className="py-20 md:py-28">
+      <Container className="section-y">
         {/* Sitemap */}
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-8">
           {FOOTER.columns.map((column) => (

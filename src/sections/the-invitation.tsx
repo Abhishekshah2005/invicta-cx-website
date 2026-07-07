@@ -13,7 +13,7 @@ import { INVITATION } from "@/content/home";
  */
 export function TheInvitation() {
   return (
-    <section className="dark relative overflow-hidden bg-background py-32 text-foreground md:py-48">
+    <section className="dark relative overflow-hidden bg-background section-y-lg text-foreground">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_25%,transparent_75%)] opacity-60"

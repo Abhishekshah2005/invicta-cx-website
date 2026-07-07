@@ -10,7 +10,7 @@ export function GamingCaseStudy() {
   const blocks = [CASE.challenge, CASE.solution, CASE.result];
 
   return (
-    <section id="case-study" className="dark bg-background py-20 text-foreground md:py-28 lg:py-32">
+    <section id="case-study" className="dark bg-background section-y text-foreground">
       <Container className="flex flex-col gap-12">
         <Reveal className="flex flex-col gap-4">
           <Eyebrow>{CASE.eyebrow}</Eyebrow>

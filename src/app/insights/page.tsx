@@ -28,7 +28,7 @@ export default function InsightsPage() {
         title={meta.title}
         lead={meta.description}
       />
-      <CardGrid items={items} columns={2} />
+      <CardGrid items={items} columns={3} />
       <SharedCta />
     </PageShell>
   );

@@ -13,8 +13,8 @@ type SectionProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 const SPACE = {
-  default: "py-20 md:py-28 lg:py-32",
-  compact: "py-16 md:py-20 lg:py-24",
+  default: "section-y",
+  compact: "section-y-sm",
 } as const;
 
 /** Semantic, vertically-rhythmic section wrapper. A neutral layout primitive. */

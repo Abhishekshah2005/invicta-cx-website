@@ -52,9 +52,9 @@ export function ThePeople() {
   );
 
   return (
-    <section id="people" ref={scope} className="relative py-20 md:py-28 lg:py-32">
+    <section id="people" ref={scope} className="relative section-y">
       <Container>
-        <Reveal className="mb-16 flex flex-col gap-4">
+        <Reveal className="mb-10 flex flex-col gap-4 md:mb-12">
           <Eyebrow>{PEOPLE.chapter}</Eyebrow>
           <TextReveal as="h2" className="max-w-[20ch] font-display text-fluid-2xl font-medium">
             {PEOPLE.title}
@@ -62,10 +62,10 @@ export function ThePeople() {
           <p className="max-w-2xl text-lg text-pretty text-muted-foreground">{PEOPLE.lead}</p>
         </Reveal>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="mx-auto grid max-w-[104rem] gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Sticky portrait */}
           <div className="hidden lg:block">
-            <div className="sticky top-24 flex h-[80svh] items-center">
+            <div className="sticky top-28 flex h-[70svh] items-center">
               <div className="relative aspect-4/5 w-full">
                 {PEOPLE.beats.map((beat, i) => (
                   <div key={i} className="people-img absolute inset-0">
@@ -87,8 +87,8 @@ export function ThePeople() {
               <div
                 key={beat.line}
                 className={cn(
-                  "people-beat flex flex-col justify-center gap-5 lg:min-h-[80svh]",
-                  i > 0 && "mt-16 lg:mt-0",
+                  "people-beat flex flex-col justify-center gap-5 lg:min-h-[54svh]",
+                  i > 0 && "mt-12 lg:mt-0",
                 )}
               >
                 <span className="font-mono text-sm text-brand">

@@ -57,8 +57,8 @@ export function TheMoment() {
   );
 
   return (
-    <section id="moment" ref={scope} className="relative overflow-hidden py-20 md:py-28 lg:py-32">
-      <div className="mx-auto w-full max-w-[100rem] px-5 sm:px-6 md:px-8 lg:px-10">
+    <section id="moment" ref={scope} className="relative overflow-hidden section-y">
+      <div className="mx-auto w-full max-w-[112rem] px-[var(--gutter)]">
         <div className="grid items-center gap-10 lg:grid-cols-[55fr_45fr] lg:gap-16">
           {/* Media 55% — first in the DOM so tablet/mobile stack media-first. On
               mobile it keeps the natural 16:9 frame (no face cropping); the

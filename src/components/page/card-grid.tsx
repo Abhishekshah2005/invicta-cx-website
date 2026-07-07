@@ -35,7 +35,9 @@ export function CardGrid({ items, className, columns = 3 }: CardGridProps) {
         <RevealGroup
           className={cn(
             "grid grid-cols-1 gap-4",
-            columns === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "md:grid-cols-2",
+            columns === 3
+              ? "sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
+              : "md:grid-cols-2 2xl:grid-cols-3",
             className,
           )}
         >

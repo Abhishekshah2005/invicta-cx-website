@@ -32,7 +32,7 @@ export function GamingHero() {
   return (
     <section
       ref={scope}
-      className="dark relative overflow-hidden bg-background pt-32 pb-20 text-foreground md:pt-44 md:pb-28"
+      className="dark relative overflow-hidden bg-background pt-28 pb-16 text-foreground md:pt-36 md:pb-20"
     >
       <AnimatedGrid animate={false} className="opacity-[0.4]" />
       <Container>

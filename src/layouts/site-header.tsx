@@ -97,7 +97,7 @@ export function SiteHeader() {
       >
         <div
           className={cn(
-            "mx-auto flex w-full max-w-7xl items-center justify-between px-5 transition-all duration-500 ease-out-expo sm:px-6 md:px-8 lg:px-10 3xl:max-w-[94rem] 3xl:px-14",
+            "mx-auto flex w-full max-w-[var(--container-editorial)] items-center justify-between px-[var(--gutter)] transition-all duration-500 ease-out-expo",
             scrolled ? "h-16 md:h-[4.5rem]" : "h-20 md:h-24",
           )}
         >

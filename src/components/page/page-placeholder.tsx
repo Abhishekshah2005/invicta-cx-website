@@ -36,7 +36,7 @@ export function PagePlaceholder({
     <PageShell>
       <PageHero crumbs={crumbs} eyebrow={eyebrow} title={title} lead={lead} />
 
-      <Section>
+      <Section space="compact">
         <Container>
           <Reveal className="flex max-w-2xl flex-col gap-5">
             <p className="text-lg text-pretty text-muted-foreground">

@@ -16,9 +16,9 @@ import { ARENA } from "@/content/home";
  */
 export function TheArena() {
   return (
-    <section className="dark relative overflow-hidden bg-background py-28 text-foreground md:py-40">
+    <section className="dark relative overflow-hidden bg-background section-y-lg text-foreground">
       <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+        <div className="mx-auto grid max-w-[94rem] items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <div className="flex flex-col items-start gap-7">
             <Reveal>
               <Eyebrow>{ARENA.chapter}</Eyebrow>

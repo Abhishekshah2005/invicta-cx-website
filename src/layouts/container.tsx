@@ -14,11 +14,11 @@ import { cn } from "@/lib/utils";
  * - `full`     — edge-to-edge (pair with `bleed`)
  */
 const WIDTH = {
-  prose: "max-w-[46rem]",
+  prose: "max-w-[48rem]",
   narrow: "max-w-4xl",
-  content: "max-w-6xl",
-  editorial: "max-w-7xl xl:max-w-[85rem] 3xl:max-w-[94rem]",
-  wide: "max-w-[96rem] 3xl:max-w-[108rem]",
+  content: "max-w-[var(--container-content)]",
+  editorial: "max-w-[var(--container-editorial)]",
+  wide: "max-w-[var(--container-wide)]",
   full: "max-w-none",
 } as const;
 
@@ -41,12 +41,7 @@ export function Container({
 }: ContainerProps) {
   return (
     <div
-      className={cn(
-        "mx-auto w-full",
-        WIDTH[size],
-        !bleed && "px-5 sm:px-6 md:px-8 lg:px-10 3xl:px-14",
-        className,
-      )}
+      className={cn("mx-auto w-full", WIDTH[size], !bleed && "px-[var(--gutter)]", className)}
       {...props}
     >
       {children}
