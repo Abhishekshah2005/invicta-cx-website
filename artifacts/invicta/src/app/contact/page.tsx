@@ -25,6 +25,18 @@ function IconPhone() {
   );
 }
 
+function IconWhatsApp() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-6">
+      <rect width="24" height="24" rx="6" fill="#25D366" />
+      <path
+        d="M12 4C7.58 4 4 7.58 4 12c0 1.42.37 2.75 1.02 3.91L4 20l4.22-1.01A7.94 7.94 0 0 0 12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8zm3.94 11.06c-.17.47-.98.9-1.36.96-.35.05-.79.07-1.27-.08-.29-.09-.67-.21-1.15-.41-2.02-.87-3.34-2.9-3.44-3.04-.1-.13-.8-1.07-.8-2.04 0-.97.51-1.45.69-1.65.17-.19.38-.24.51-.24l.36.01c.12 0 .27-.04.43.33l.55 1.37c.05.12.08.27.01.42l-.22.38-.3.35c-.1.1-.21.21-.09.42.12.2.55.9 1.18 1.46.81.72 1.49.94 1.7 1.05.21.1.33.09.46-.05l.35-.41c.14-.18.27-.15.46-.09l1.37.65c.2.1.34.14.39.22.05.08.05.46-.12.93z"
+        fill="white"
+      />
+    </svg>
+  );
+}
+
 function IconEmail() {
   return (
     <svg viewBox="0 0 24 24" fill="none" className="size-6">
@@ -129,6 +141,16 @@ const CONTACT_CHANNELS: ContactCard[] = [
     href: "tel:+917777077049",
     image: "/assets/contact/phone.png",
     actionLabel: "Call now",
+  },
+  {
+    BrandIcon: IconWhatsApp,
+    label: "WhatsApp",
+    value: "+91 7777077049",
+    description: "Message us on WhatsApp — quick replies, any time of day.",
+    href: "https://wa.me/917777077049",
+    image: "/assets/contact/whatsapp.png",
+    external: true,
+    actionLabel: "Chat on WhatsApp",
   },
   {
     BrandIcon: IconEmail,
@@ -330,7 +352,7 @@ export default function ContactPage() {
               </p>
             </div>
           </Reveal>
-          <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {CONTACT_CHANNELS.map((card) => (
               <ContactFlipCard key={card.label} card={card} />
             ))}
