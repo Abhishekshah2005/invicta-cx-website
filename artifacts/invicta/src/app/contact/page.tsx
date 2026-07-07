@@ -1,58 +1,214 @@
 import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, ArrowUpRight } from "lucide-react";
 
-import { ROUTES, PAGE_META } from "@/lib/routes";
+import { PAGE_META } from "@/lib/routes";
 import { Container } from "@/layouts/container";
 import { PageShell, PageHero } from "@/components/page";
-import { Reveal } from "@/components/reveal";
+import { RevealGroup, Reveal } from "@/components/reveal";
 import { Eyebrow } from "@/components/eyebrow";
 import { cn } from "@/lib/utils";
 
 const meta = PAGE_META.contact!;
 
-const CONTACT_CHANNELS = [
+interface ContactCard {
+  icon: React.ElementType;
+  label: string;
+  value: string;
+  description: string;
+  href: string;
+  image: string;
+  external?: boolean;
+}
+
+interface SocialCard {
+  icon: React.ElementType;
+  label: string;
+  handle: string;
+  description: string;
+  href: string;
+  image: string;
+}
+
+const CONTACT_CHANNELS: ContactCard[] = [
   {
     icon: Phone,
     label: "Phone",
     value: "+91 7777077049",
-    href: "tel:+917777077049",
     description: "Call us directly — we answer.",
+    href: "tel:+917777077049",
+    image: "/assets/contact/phone.png",
   },
   {
     icon: Mail,
     label: "Email",
     value: "darshan@invictaindia.in",
+    description: "Drop us a line anytime and we'll respond within the hour.",
     href: "mailto:darshan@invictaindia.in",
-    description: "Drop us a line anytime.",
+    image: "/assets/contact/email.png",
   },
   {
     icon: MapPin,
     label: "Office",
-    value: "1st Floor, Noronha Dias Business Complex, near KTC Colva Circle, Old Market, Madgaon, Goa 403601",
+    value: "Madgaon, Goa 403601",
+    description:
+      "1st Floor, Noronha Dias Business Complex, near KTC Colva Circle, Old Market, Madgaon, Goa.",
     href: "https://maps.google.com/?q=Noronha+Dias+Business+Complex+Madgaon+Goa+403601",
-    description: "Visit us in Goa, India.",
+    image: "/assets/contact/office.png",
+    external: true,
   },
 ];
 
-const SOCIAL_LINKS = [
+const SOCIAL_LINKS: SocialCard[] = [
   {
     icon: Instagram,
     label: "Instagram",
-    href: "https://www.instagram.com/invicta_esolutions/",
     handle: "@invicta_esolutions",
+    description: "Behind-the-scenes, team updates, and customer experience insights.",
+    href: "https://www.instagram.com/invicta_esolutions/",
+    image: "/assets/contact/instagram.png",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/invicta-esolutions/",
     handle: "invicta-esolutions",
+    description: "Industry perspectives, case studies, and company milestones.",
+    href: "https://www.linkedin.com/company/invicta-esolutions/",
+    image: "/assets/contact/linkedin.png",
   },
   {
     icon: Facebook,
     label: "Facebook",
-    href: "https://www.facebook.com/invictaesolutionsindia/",
     handle: "invictaesolutionsindia",
+    description: "Community stories, service announcements, and team moments.",
+    href: "https://www.facebook.com/invictaesolutionsindia/",
+    image: "/assets/contact/facebook.png",
   },
 ];
+
+function ContactFlipCard({ card }: { card: ContactCard }) {
+  const Icon = card.icon;
+  return (
+    <div className="group block h-72 sm:h-80" style={{ perspective: "900px" }}>
+      <div className="relative h-full w-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+        {/* Front */}
+        <div className="absolute inset-0 rounded-2xl overflow-hidden [backface-visibility:hidden]">
+          <img
+            src={card.image}
+            alt={card.label}
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
+          <div className="absolute inset-0 flex flex-col justify-between p-6">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/20 backdrop-blur-sm border border-brand/30">
+              <Icon className="size-5 text-brand" />
+            </div>
+            <div className="flex flex-col gap-1">
+              <p className="font-mono text-[10px] tracking-[0.2em] text-brand uppercase">
+                {card.label}
+              </p>
+              <h3 className="font-display text-lg font-medium text-white leading-snug">
+                {card.value}
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        {/* Back */}
+        <a
+          href={card.href}
+          target={card.external ? "_blank" : undefined}
+          rel={card.external ? "noopener noreferrer" : undefined}
+          className={cn(
+            "group/back absolute inset-0 rounded-2xl border border-brand/25 bg-card",
+            "[backface-visibility:hidden] [transform:rotateY(180deg)]",
+            "flex flex-col gap-4 p-6 transition-colors hover:border-brand/50",
+          )}
+        >
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10">
+            <Icon className="size-5 text-brand" />
+          </div>
+          <div className="flex flex-col gap-1 flex-1">
+            <p className="font-mono text-[10px] tracking-[0.2em] text-brand uppercase">
+              {card.label}
+            </p>
+            <p className="font-display text-base font-medium leading-snug">{card.value}</p>
+            <p className="mt-2 text-sm text-pretty text-muted-foreground leading-relaxed">
+              {card.description}
+            </p>
+          </div>
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-brand">
+            {card.external ? "Get directions" : card.icon === Phone ? "Call now" : "Send email"}
+            <ArrowUpRight className="size-3.5 transition-transform duration-200 group-hover/back:translate-x-0.5 group-hover/back:-translate-y-0.5" />
+          </div>
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function SocialFlipCard({ card }: { card: SocialCard }) {
+  const Icon = card.icon;
+  return (
+    <div className="group block h-72 sm:h-80" style={{ perspective: "900px" }}>
+      <div className="relative h-full w-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+        {/* Front */}
+        <div className="absolute inset-0 rounded-2xl overflow-hidden [backface-visibility:hidden]">
+          <img
+            src={card.image}
+            alt={card.label}
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
+          <div className="absolute inset-0 flex flex-col justify-between p-6">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/20 backdrop-blur-sm border border-brand/30">
+              <Icon className="size-5 text-brand" />
+            </div>
+            <div className="flex flex-col gap-1">
+              <p className="font-mono text-[10px] tracking-[0.2em] text-brand uppercase">
+                {card.label}
+              </p>
+              <h3 className="font-display text-lg font-medium text-white leading-snug">
+                {card.handle}
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        {/* Back */}
+        <a
+          href={card.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            "group/back absolute inset-0 rounded-2xl border border-brand/25 bg-card",
+            "[backface-visibility:hidden] [transform:rotateY(180deg)]",
+            "flex flex-col gap-4 p-6 transition-colors hover:border-brand/50",
+          )}
+        >
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10">
+            <Icon className="size-5 text-brand" />
+          </div>
+          <div className="flex flex-col gap-1 flex-1">
+            <p className="font-mono text-[10px] tracking-[0.2em] text-brand uppercase">
+              {card.label}
+            </p>
+            <p className="font-display text-base font-medium leading-snug">{card.handle}</p>
+            <p className="mt-2 text-sm text-pretty text-muted-foreground leading-relaxed">
+              {card.description}
+            </p>
+          </div>
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-brand">
+            Follow on {card.label}
+            <ArrowUpRight className="size-3.5 transition-transform duration-200 group-hover/back:translate-x-0.5 group-hover/back:-translate-y-0.5" />
+          </div>
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default function ContactPage() {
   return (
@@ -65,92 +221,40 @@ export default function ContactPage() {
       />
 
       {/* ── CONTACT CHANNELS ─────────────────────────────────────────── */}
-      <section className="border-b border-border section-y-md">
-        <Container>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {CONTACT_CHANNELS.map((ch) => {
-              const Icon = ch.icon;
-              return (
-                <Reveal key={ch.label}>
-                  <a
-                    href={ch.href}
-                    target={ch.icon === MapPin ? "_blank" : undefined}
-                    rel={ch.icon === MapPin ? "noopener noreferrer" : undefined}
-                    className={cn(
-                      "group flex flex-col gap-5 rounded-2xl border border-border p-7",
-                      "bg-background transition-all duration-300",
-                      "hover:border-brand/40 hover:bg-brand/[0.03] hover:shadow-lg hover:shadow-brand/5",
-                    )}
-                  >
-                    <div className="flex items-start justify-between">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10">
-                        <Icon className="size-5 text-brand" />
-                      </div>
-                      <ArrowUpRight className="size-4 text-muted-foreground/40 transition-all duration-300 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </div>
-
-                    <div className="flex flex-col gap-1.5">
-                      <p className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
-                        {ch.label}
-                      </p>
-                      <p className="text-base font-medium text-foreground leading-snug">
-                        {ch.value}
-                      </p>
-                    </div>
-
-                    <p className="text-sm text-muted-foreground">{ch.description}</p>
-                  </a>
-                </Reveal>
-              );
-            })}
-          </div>
+      <section className="border-b border-border bg-muted/40 section-y-md">
+        <Container className="flex flex-col gap-10">
+          <Reveal>
+            <div className="flex flex-col gap-2">
+              <Eyebrow>Reach us</Eyebrow>
+              <p className="text-muted-foreground text-base max-w-lg">
+                Hover each card to see the details — then click to connect directly.
+              </p>
+            </div>
+          </Reveal>
+          <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {CONTACT_CHANNELS.map((card) => (
+              <ContactFlipCard key={card.label} card={card} />
+            ))}
+          </RevealGroup>
         </Container>
       </section>
 
       {/* ── SOCIAL LINKS ─────────────────────────────────────────────── */}
       <section className="border-b border-border section-y-md">
-        <Container>
-          <div className="flex flex-col gap-10">
-            <Reveal>
-              <div className="flex flex-col gap-2">
-                <Eyebrow>Follow us</Eyebrow>
-                <p className="text-muted-foreground text-base max-w-lg">
-                  Stay updated with our latest insights, updates, and behind-the-scenes from the Invicta team.
-                </p>
-              </div>
-            </Reveal>
-
-            <div className="grid gap-4 sm:grid-cols-3">
-              {SOCIAL_LINKS.map((s) => {
-                const Icon = s.icon;
-                return (
-                  <Reveal key={s.label}>
-                    <a
-                      href={s.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={cn(
-                        "group flex items-center gap-4 rounded-2xl border border-border p-6",
-                        "bg-background transition-all duration-300",
-                        "hover:border-brand/40 hover:bg-brand/[0.03]",
-                      )}
-                    >
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand/10">
-                        <Icon className="size-5 text-brand" />
-                      </div>
-                      <div className="flex flex-col gap-0.5 min-w-0">
-                        <p className="font-medium text-foreground text-sm">{s.label}</p>
-                        <p className="truncate font-mono text-xs text-muted-foreground">
-                          {s.handle}
-                        </p>
-                      </div>
-                      <ArrowUpRight className="ml-auto size-4 shrink-0 text-muted-foreground/40 transition-all duration-300 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </a>
-                  </Reveal>
-                );
-              })}
+        <Container className="flex flex-col gap-10">
+          <Reveal>
+            <div className="flex flex-col gap-2">
+              <Eyebrow>Follow us</Eyebrow>
+              <p className="text-muted-foreground text-base max-w-lg">
+                Stay updated with our latest insights, updates, and behind-the-scenes from the Invicta team.
+              </p>
             </div>
-          </div>
+          </Reveal>
+          <RevealGroup className="grid gap-5 sm:grid-cols-3">
+            {SOCIAL_LINKS.map((card) => (
+              <SocialFlipCard key={card.label} card={card} />
+            ))}
+          </RevealGroup>
         </Container>
       </section>
 
@@ -173,7 +277,6 @@ export default function ContactPage() {
                   Tell us where your customer experience is breaking down. We'll map the first fix with you — no pitch deck, no contract pressure. Just a specialist who already understands your world.
                 </p>
               </Reveal>
-
               <Reveal className="flex flex-wrap gap-3 pt-2">
                 <a
                   href="mailto:darshan@invictaindia.in"
@@ -208,10 +311,7 @@ export default function ContactPage() {
                   { value: "24/7", label: "Coverage" },
                   { value: "15+", label: "Industries served" },
                 ].map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="flex flex-col gap-1.5 bg-background p-7"
-                  >
+                  <div key={stat.label} className="flex flex-col gap-1.5 bg-background p-7">
                     <span className="font-display text-3xl md:text-4xl">{stat.value}</span>
                     <span className="font-mono text-[10px] tracking-[0.18em] text-foreground/40 uppercase">
                       {stat.label}
