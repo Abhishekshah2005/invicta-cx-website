@@ -120,7 +120,7 @@ export function SiteFooter() {
           alt=""
           aria-hidden
           className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          style={{ objectPosition: "60% center", opacity: 0.22 }}
+          style={{ objectPosition: "60% center", opacity: 0.38 }}
         />
         {/* Dark gradient: solid black left (logo + text readable), eases right */}
         <div
