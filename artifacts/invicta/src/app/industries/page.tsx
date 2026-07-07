@@ -18,6 +18,7 @@ const items: CardItem[] = INDUSTRIES.map((industry) => ({
   description: industry.description,
   meta: industry.slug === "gaming" ? "Flagship" : undefined,
   featured: industry.slug === "gaming",
+  image: `/assets/industries/${industry.slug}/hero/hero.png`,
 }));
 
 export default function IndustriesPage() {

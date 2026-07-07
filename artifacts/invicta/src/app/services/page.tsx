@@ -16,6 +16,7 @@ const items: CardItem[] = SERVICES.map((service) => ({
   href: `${ROUTES.services}/${service.slug}`,
   label: service.label,
   description: service.description,
+  image: `/assets/services/${service.slug}/hero/hero.png`,
 }));
 
 export default function ServicesPage() {

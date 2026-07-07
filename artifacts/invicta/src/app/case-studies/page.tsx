@@ -17,8 +17,8 @@ const items: CardItem[] = CASE_STUDIES.map((study, _i, arr) => ({
   label: study.label,
   description: study.description,
   meta: "Case Study",
-  // A lone case study reads as a full-width feature, not a stranded half-card.
   featured: arr.length === 1,
+  image: `/assets/home/proof/lunaland.png`,
 }));
 
 export default function CaseStudiesPage() {
