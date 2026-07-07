@@ -114,27 +114,27 @@ export function SiteFooter() {
 
       {/* ── 4. BRAND SIGN-OFF ─────────────────────────────────────────── */}
       <div className="relative border-t border-foreground/10 overflow-hidden">
-        {/* Majestic horse — the signature image */}
+        {/* Multi-industry business background */}
         <img
           src="/assets/footer/signoff-bg.png"
           alt=""
           aria-hidden
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-50"
-          style={{ objectPosition: "70% center" }}
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+          style={{ objectPosition: "60% center", opacity: 0.22 }}
         />
-        {/* Gradient overlay: full black on left (where logo sits), fades right */}
+        {/* Dark gradient: solid black left (logo + text readable), eases right */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.80) 40%, rgba(0,0,0,0.40) 70%, rgba(0,0,0,0.20) 100%)",
+              "linear-gradient(to right, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.35) 100%)",
           }}
         />
-        {/* Top gradient so it blends with the section above */}
+        {/* Top blend with sitemap section */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-24"
+          className="pointer-events-none absolute inset-x-0 top-0 h-20"
           style={{ background: "linear-gradient(to bottom, #0a0a0a 0%, transparent 100%)" }}
         />
 
