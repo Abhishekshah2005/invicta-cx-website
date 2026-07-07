@@ -22,10 +22,13 @@ function Wordmark({ logoClass }: { logoClass?: string }) {
       aria-label="Invicta — home"
       className="group/logo -m-2 inline-flex items-center p-2 transition-opacity hover:opacity-80"
     >
-      <Logo
-        priority
-        className={cn("w-auto transition-[height] duration-500 ease-out-expo", logoClass)}
-      />
+      {/* `data-header-logo` is the FLIP target the intro loader hands off to. */}
+      <span data-header-logo className="inline-flex">
+        <Logo
+          priority
+          className={cn("w-auto transition-[height] duration-500 ease-out-expo", logoClass)}
+        />
+      </span>
     </Link>
   );
 }

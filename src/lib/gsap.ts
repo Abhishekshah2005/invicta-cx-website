@@ -13,12 +13,30 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { SplitText } from "gsap/SplitText";
 import { Observer } from "gsap/Observer";
 import { Flip } from "gsap/Flip";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 // Register plugins once, on the client only. GSAP's registry is idempotent, so
 // re-registration (e.g. Fast Refresh) is harmless.
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText, Observer, Flip);
+  gsap.registerPlugin(
+    useGSAP,
+    ScrollTrigger,
+    ScrollSmoother,
+    SplitText,
+    Observer,
+    Flip,
+    MotionPathPlugin,
+  );
   gsap.config({ nullTargetWarn: false });
 }
 
-export { gsap, useGSAP, ScrollTrigger, ScrollSmoother, SplitText, Observer, Flip };
+export {
+  gsap,
+  useGSAP,
+  ScrollTrigger,
+  ScrollSmoother,
+  SplitText,
+  Observer,
+  Flip,
+  MotionPathPlugin,
+};

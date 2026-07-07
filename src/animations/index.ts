@@ -16,5 +16,4 @@ export * from "./hero";
 export * from "./cards";
 export * from "./horizontal";
 export * from "./stack";
-export * from "./loader";
 export * from "./pageTransition";
