@@ -63,10 +63,12 @@ export function ThePeople() {
         </Reveal>
 
         <div className="mx-auto grid max-w-[104rem] gap-10 lg:grid-cols-2 lg:gap-16">
-          {/* Sticky portrait */}
+          {/* Sticky portrait — capped by viewport height (max-w derived from svh)
+              so the 4/5 frame never grows taller than the pinned area and spills
+              over the intro above it. */}
           <div className="hidden lg:block">
-            <div className="sticky top-28 flex h-[70svh] items-center">
-              <div className="relative aspect-4/5 w-full">
+            <div className="sticky top-28">
+              <div className="relative mx-auto aspect-4/5 w-full max-w-[62svh]">
                 {PEOPLE.beats.map((beat, i) => (
                   <div key={i} className="people-img absolute inset-0">
                     <ImagePlaceholder
