@@ -322,6 +322,14 @@ export default function ContactPage() {
       {/* ── CONTACT CHANNELS ─────────────────────────────────────────── */}
       <section className="border-b border-border bg-muted/40 section-y-md">
         <Container className="flex flex-col gap-10">
+          <Reveal>
+            <div className="flex flex-col gap-2">
+              <Eyebrow>Reach us</Eyebrow>
+              <p className="text-muted-foreground text-base max-w-lg">
+                Hover each card to see the details — then click to connect directly.
+              </p>
+            </div>
+          </Reveal>
           <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {CONTACT_CHANNELS.map((card) => (
               <ContactFlipCard key={card.label} card={card} />
@@ -333,6 +341,14 @@ export default function ContactPage() {
       {/* ── SOCIAL LINKS ─────────────────────────────────────────────── */}
       <section className="border-b border-border section-y-md">
         <Container className="flex flex-col gap-10">
+          <Reveal>
+            <div className="flex flex-col gap-2">
+              <Eyebrow>Follow us</Eyebrow>
+              <p className="text-muted-foreground text-base max-w-lg">
+                Stay updated with our latest insights, updates, and behind-the-scenes from the Invicta team.
+              </p>
+            </div>
+          </Reveal>
           <RevealGroup className="grid gap-5 sm:grid-cols-3">
             {SOCIAL_LINKS.map((card) => (
               <SocialFlipCard key={card.label} card={card} />
