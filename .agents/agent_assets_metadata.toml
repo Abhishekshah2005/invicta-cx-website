@@ -35,7 +35,7 @@ title = "esports gaming operations arena"
 id = "9dNE3-QViFJsCw39PkexB"
 uri = "file://artifacts/invicta/public/assets/home/proof/lunaland.png"
 type = "image"
-title = "gaming company headquarters lobby"
+title = "generated_image"
 
 [[generated]]
 id = "nBvXb40FL_Le15WROtgxO"
@@ -1030,5 +1030,11 @@ title = "generated_image"
 [[generated]]
 id = "dobWHNLHkfJMNPAXJO_yU"
 uri = "file://artifacts/invicta/public/assets/services/workforce-management/challenges/04.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "WnFsff7j9e-J8Mq3Mm0vf"
+uri = "file://attached_assets/generated_images/cinematic_editorial_photograph_of_42ed.png"
 type = "image"
 title = "generated_image"
