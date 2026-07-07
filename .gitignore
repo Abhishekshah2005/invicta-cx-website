@@ -46,3 +46,8 @@ next-env.d.ts
 
 # stray source video assets at repo root (the used copies live in /public)
 /*.mp4
+
+# uploaded source images (originals) — only the optimized public/assets copies are committed
+/photo-drop/*.jpg
+/photo-drop/*.jpeg
+/photo-drop/*.png

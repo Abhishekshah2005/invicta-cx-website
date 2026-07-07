@@ -75,6 +75,8 @@ export function ThePeople() {
                       tone={i % 2 === 0 ? "ink" : "crimson"}
                       ratio="4 / 5"
                       label={beat.imageLabel}
+                      src={beat.image}
+                      sizes="(max-width: 1024px) 0px, 40vw"
                       className="size-full"
                     />
                   </div>
@@ -101,7 +103,12 @@ export function ThePeople() {
                 </h3>
                 <p className="max-w-md text-lg text-pretty text-muted-foreground">{beat.body}</p>
                 <div className="mt-2 lg:hidden">
-                  <ImagePlaceholder tone="ink" ratio="4 / 3" label={beat.imageLabel} />
+                  <ImagePlaceholder
+                    tone="ink"
+                    ratio="4 / 3"
+                    label={beat.imageLabel}
+                    src={beat.image}
+                  />
                 </div>
               </div>
             ))}

@@ -9,6 +9,7 @@ export const vipManagement: ServiceContent = {
     lead: "Invicta runs dedicated VIP and high-value account management — personal, proactive relationships that grow lifetime value and keep your most important customers loyal.",
     imageLabel:
       "A VIP account manager in a considered conversation, refined and attentive, warm light — premium.",
+    image: "/assets/services/vip-management/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

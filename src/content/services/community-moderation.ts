@@ -9,6 +9,7 @@ export const communityModeration: ServiceContent = {
     lead: "Invicta provides trust-and-safety moderation that keeps your platform, community, and user-generated content safe, on-policy, and welcoming — around the clock.",
     imageLabel:
       "A moderator reviewing a community feed with focus and care, calm workspace, cool light — documentary.",
+    image: "/assets/services/community-moderation/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

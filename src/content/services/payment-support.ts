@@ -9,6 +9,7 @@ export const paymentSupport: ServiceContent = {
     lead: "Invicta handles billing, refunds, disputes, and failed-payment recovery with the accuracy and calm those conversations demand — protecting revenue and trust at once.",
     imageLabel:
       "A payments specialist resolving a billing query, calm and precise, secure workspace — documentary.",
+    image: "/assets/services/payment-support/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

@@ -9,6 +9,7 @@ export const customerSupport: ServiceContent = {
     lead: "Invicta staffs and runs your frontline: trained specialists resolving fast across chat, email, phone, and social, in your voice and to your standard.",
     imageLabel:
       "A support specialist mid-conversation on a headset, warm and focused, soft daylight — human, editorial.",
+    image: "/assets/services/customer-support/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

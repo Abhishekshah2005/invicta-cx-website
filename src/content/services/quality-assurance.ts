@@ -9,6 +9,7 @@ export const qualityAssurance: ServiceContent = {
     lead: "Invicta runs rigorous support QA — scoring real interactions, coaching to the gaps, and turning quality from a hope into a managed, improving number.",
     imageLabel:
       "A QA lead reviewing a scored interaction on a tablet, focused and precise, calm light — documentary.",
+    image: "/assets/services/quality-assurance/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

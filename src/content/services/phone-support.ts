@@ -9,6 +9,7 @@ export const phoneSupport: ServiceContent = {
     lead: "Invicta staffs warm, capable voice support for the calls that matter most — urgent, sensitive, and high-value moments where a real person changes everything.",
     imageLabel:
       "A specialist on a headset listening intently, calm and reassuring, soft light — human, cinematic.",
+    image: "/assets/services/phone-support/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

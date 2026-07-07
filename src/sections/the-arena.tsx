@@ -54,7 +54,12 @@ export function TheArena() {
 
           <ImageReveal direction="up">
             <Parallax speed={0.16}>
-              <ImagePlaceholder tone="crimson" ratio="4 / 5" label={ARENA.imageLabel} />
+              <ImagePlaceholder
+                tone="crimson"
+                ratio="4 / 5"
+                label={ARENA.imageLabel}
+                src={ARENA.image}
+              />
             </Parallax>
           </ImageReveal>
         </div>

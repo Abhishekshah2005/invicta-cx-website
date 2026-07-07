@@ -109,24 +109,28 @@ export const PEOPLE = {
       body: "A disputed payment. A missed payout. A frustrated goodbye-in-waiting. Won by empathy — never a decision tree.",
       imageLabel:
         "Extreme close-up of a support specialist mid-conversation, eyes focused, faint headset — cinematic, warm key light.",
+      image: "/assets/home/people/people-01.jpg",
     },
     {
       line: "Complexity needs a specialist.",
       body: "Trained on your platform until they resolve what bots escalate and abandon.",
       imageLabel:
         "A specialist at a clean workstation, multiple screens reflected softly, calm and in command. Editorial, shallow depth.",
+      image: "/assets/home/people/people-02.jpg",
     },
     {
       line: "Every conversation is your brand, defended.",
       body: "Tone discipline, rigor, and around-the-clock vigilance — so your reputation is safe in every reply.",
       imageLabel:
         "A team lead reviewing quality on a tablet, quiet confidence, natural window light. Premium, documentary.",
+      image: "/assets/home/people/people-03.jpg",
     },
     {
       line: "And loyalty is what we leave behind.",
       body: "The interaction ends. The relationship doesn't. That's the whole point.",
       imageLabel:
         "A warm, genuine smile mid-call — the moment a problem becomes a loyal customer. Cinematic, real.",
+      image: "/assets/home/people/people-04.jpg",
     },
   ],
 } as const;
@@ -140,6 +144,7 @@ export const ARENA = {
   lead: "Real money. Hundreds of live titles. Fraud, KYC, and VIP economics — at 3am, in every timezone. An operation that thrives here can protect any business.",
   imageLabel:
     "A live iGaming support floor at night — screens glowing crimson and gold, specialists in focus. Cinematic, high-energy, real.",
+  image: "/assets/home/arena/arena.jpg",
   points: [
     "Player onboarding & first-line support across 700+ titles",
     "Continuous KYC, age verification & AML compliance",

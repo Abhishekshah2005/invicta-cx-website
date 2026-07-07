@@ -51,6 +51,7 @@ export function TheProof() {
                 tone="ink"
                 ratio="4 / 3"
                 label="Lunaland operations — a VIP account manager reviewing player insights on a premium dashboard. Editorial, warm, real."
+                src="/assets/home/proof/lunaland.jpg"
               />
             </ImageReveal>
             <Reveal>

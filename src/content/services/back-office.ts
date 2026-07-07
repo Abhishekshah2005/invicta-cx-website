@@ -9,6 +9,7 @@ export const backOffice: ServiceContent = {
     lead: "Invicta handles the data, processing, and administrative work behind your operation — accurate, timely, and off your team's plate so the front office can focus on customers.",
     imageLabel:
       "A back-office specialist processing records with precision, organised workspace, calm light — documentary.",
+    image: "/assets/services/back-office/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },

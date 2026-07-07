@@ -9,6 +9,7 @@ export const customerRetention: ServiceContent = {
     lead: "Invicta runs proactive save, win-back, and loyalty programs — human outreach that catches customers before they leave and brings back the ones who did.",
     imageLabel:
       "A retention specialist in a warm, persuasive conversation, engaged and empathetic, soft light — editorial.",
+    image: "/assets/services/customer-retention/hero/hero.jpg",
     cta: { label: "Talk to an Expert", href: "/contact" },
     secondaryCta: { label: "See how we operate", href: "/method" },
   },
