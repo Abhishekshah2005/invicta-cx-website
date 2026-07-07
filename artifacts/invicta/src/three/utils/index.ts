@@ -1,0 +1,1 @@
+export { disposeObject } from "./dispose";

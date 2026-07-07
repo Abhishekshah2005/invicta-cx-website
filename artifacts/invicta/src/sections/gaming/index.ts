@@ -1,0 +1,12 @@
+export { GamingHero } from "./hero";
+export { GamingChallenges } from "./challenges";
+export { GamingWhyChoose } from "./why-choose";
+export { GamingJourney } from "./journey";
+export { GamingSupport } from "./support";
+export { GamingTrust } from "./trust";
+export { GamingVip } from "./vip";
+export { GamingOperations } from "./operations";
+export { GamingTechnology } from "./technology";
+export { GamingCaseStudy } from "./case-study";
+export { GamingFaq } from "./faq";
+export { GamingCta } from "./cta";

@@ -1,0 +1,118 @@
+/**
+ * Reusable visual-effect utilities and keyframes. These are the CSS half of the
+ * effects system; the interactive/JS half lives in `src/components/effects`.
+ * Compose them with Tailwind utilities, e.g. `class="glass rounded-2xl"`.
+ */
+
+/* Animation utilities generated from the keyframes below (`animate-*`). */
+@theme {
+  --animate-marquee-x: marquee-x 30s linear infinite;
+  --animate-marquee-y: marquee-y 30s linear infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+  --animate-grid-pan: grid-pan 8s linear infinite;
+}
+
+/* --- Glassmorphism ------------------------------------------------------- */
+@utility glass {
+  background-color: color-mix(in oklab, var(--color-background) 55%, transparent);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid color-mix(in oklab, var(--color-foreground) 12%, transparent);
+}
+
+/* --- Film-grain / noise overlay ----------------------------------------- */
+/* Fractal-noise SVG as a tileable data-URI; keep opacity low. */
+@utility noise {
+  position: relative;
+}
+@utility noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* --- Gradient mesh background ------------------------------------------- */
+@utility gradient-mesh {
+  background-color: var(--color-background);
+  background-image:
+    radial-gradient(
+      at 20% 20%,
+      color-mix(in oklab, var(--color-primary) 22%, transparent) 0,
+      transparent 45%
+    ),
+    radial-gradient(
+      at 80% 10%,
+      color-mix(in oklab, var(--color-accent) 25%, transparent) 0,
+      transparent 45%
+    ),
+    radial-gradient(
+      at 70% 80%,
+      color-mix(in oklab, var(--color-primary) 18%, transparent) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 15% 75%,
+      color-mix(in oklab, var(--color-secondary) 30%, transparent) 0,
+      transparent 50%
+    );
+}
+
+/* --- Animated grid ------------------------------------------------------- */
+@utility grid-lines {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--color-foreground) 8%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-foreground) 8%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 64px 64px;
+}
+
+/* --- Keyframes ----------------------------------------------------------- */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-y {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes grid-pan {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 64px 64px;
+  }
+}
+
+/* Respect reduced-motion: disable looping background animations. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-grid-pan,
+  .animate-shimmer {
+    animation: none !important;
+  }
+}
