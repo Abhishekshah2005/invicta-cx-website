@@ -58,16 +58,16 @@
  *  - section-y-lg  dark feature & CTA bands, a touch more presence (~56→128px)
  */
 @utility section-y {
-  padding-top: clamp(2.25rem, 1.65rem + 2.8vw, 5.5rem);
-  padding-bottom: clamp(2.25rem, 1.65rem + 2.8vw, 5.5rem);
+  padding-top: clamp(1.75rem, 1.3rem + 2vw, 4.25rem);
+  padding-bottom: clamp(1.75rem, 1.3rem + 2vw, 4.25rem);
 }
 
 @utility section-y-sm {
-  padding-top: clamp(1.9rem, 1.5rem + 2.2vw, 4.5rem);
-  padding-bottom: clamp(1.9rem, 1.5rem + 2.2vw, 4.5rem);
+  padding-top: clamp(1.5rem, 1.2rem + 1.6vw, 3.5rem);
+  padding-bottom: clamp(1.5rem, 1.2rem + 1.6vw, 3.5rem);
 }
 
 @utility section-y-lg {
-  padding-top: clamp(2.85rem, 2.2rem + 3.6vw, 6.75rem);
-  padding-bottom: clamp(2.85rem, 2.2rem + 3.6vw, 6.75rem);
+  padding-top: clamp(2.25rem, 1.8rem + 2.5vw, 5rem);
+  padding-bottom: clamp(2.25rem, 1.8rem + 2.5vw, 5rem);
 }

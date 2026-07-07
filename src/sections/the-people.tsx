@@ -89,7 +89,7 @@ export function ThePeople() {
               <div
                 key={beat.line}
                 className={cn(
-                  "people-beat flex flex-col justify-center gap-5 lg:min-h-[54svh]",
+                  "people-beat flex flex-col justify-center gap-5 lg:min-h-[42svh]",
                   i > 0 && "mt-12 lg:mt-0",
                 )}
               >
