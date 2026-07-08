@@ -1,10 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "wouter";
 import { ArrowUpRight } from "lucide-react";
 
-import { gsap, useGSAP } from "@/lib/gsap";
 import { cn } from "@/lib/utils";
 import { ImagePlaceholder } from "@/components/media/image-placeholder";
 
@@ -24,96 +23,65 @@ interface IndexListProps {
 }
 
 /**
- * An editorial index — big type rows that dim their neighbours on hover while a
- * cursor-following image preview reveals the destination. A premium alternative
- * to a card grid; the preview is a desktop enhancement (absent on touch).
+ * An editorial index — big type rows next to an always-visible image panel.
+ * The panel defaults to the first item's photo and swaps on hover, so the
+ * layout never shows a blank gap while scrolling (a desktop enhancement;
+ * the image panel is hidden on touch/mobile where hover doesn't apply).
  */
 export function IndexList({ kicker, heading, items }: IndexListProps) {
-  const scope = useRef<HTMLDivElement>(null);
-  const previewRef = useRef<HTMLDivElement>(null);
-  const xTo = useRef<((v: number) => void) | null>(null);
-  const yTo = useRef<((v: number) => void) | null>(null);
-
-  const [active, setActive] = useState<number | null>(null);
-  const [preview, setPreview] = useState<IndexItem | null>(null);
-
-  useGSAP(
-    () => {
-      if (!previewRef.current) return;
-      xTo.current = gsap.quickTo(previewRef.current, "x", { duration: 0.5, ease: "power3.out" });
-      yTo.current = gsap.quickTo(previewRef.current, "y", { duration: 0.5, ease: "power3.out" });
-    },
-    { scope },
-  );
-
-  const handleMove = (event: React.PointerEvent) => {
-    xTo.current?.(event.clientX);
-    yTo.current?.(event.clientY);
-  };
-
-  const handleEnter = (index: number) => {
-    setActive(index);
-    const item = items[index];
-    if (item) setPreview(item);
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
+  const current = items[activeIndex] ?? items[0];
 
   return (
-    <div ref={scope} onPointerMove={handleMove} className="relative">
-      <h3 className="mb-2 font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
-        {kicker}
-      </h3>
-      <p className="mb-8 font-display text-2xl font-medium md:text-3xl">{heading}</p>
+    <div className="grid gap-8 lg:grid-cols-[3fr_2fr] lg:items-start lg:gap-8">
+      <div>
+        <h3 className="mb-2 font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
+          {kicker}
+        </h3>
+        <p className="mb-8 font-display text-2xl font-medium md:text-3xl">{heading}</p>
 
-      <ul className="border-t border-border" onPointerLeave={() => setActive(null)}>
-        {items.map((item, index) => (
-          <li key={item.name}>
-            <Link
-              href={item.href}
-              onPointerEnter={() => handleEnter(index)}
-              className={cn(
-                "group flex items-center justify-between gap-4 border-b border-border py-5 transition-all duration-300 md:py-6",
-                active !== null && active !== index ? "opacity-35" : "opacity-100",
-              )}
-            >
-              <span className="flex items-baseline gap-4">
-                <span className="font-display text-2xl font-medium transition-transform duration-300 group-hover:translate-x-2 md:text-4xl">
-                  {item.name}
+        <ul className="border-t border-border">
+          {items.map((item, index) => (
+            <li key={item.name}>
+              <Link
+                href={item.href}
+                onPointerEnter={() => setActiveIndex(index)}
+                onFocus={() => setActiveIndex(index)}
+                className={cn(
+                  "group flex items-center justify-between gap-4 border-b border-border py-5 transition-all duration-300 md:py-6",
+                  activeIndex === index ? "opacity-100" : "opacity-70 hover:opacity-100",
+                )}
+              >
+                <span className="flex items-baseline gap-4">
+                  <span className="font-display text-2xl font-medium transition-transform duration-300 group-hover:translate-x-2 md:text-4xl">
+                    {item.name}
+                  </span>
                 </span>
-              </span>
-              <span className="flex items-center gap-4">
-                <span className="hidden font-mono text-xs tracking-wider text-muted-foreground uppercase sm:inline">
-                  {item.meta}
+                <span className="flex items-center gap-4">
+                  <span className="hidden font-mono text-xs tracking-wider text-muted-foreground uppercase sm:inline">
+                    {item.meta}
+                  </span>
+                  <ArrowUpRight className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-brand" />
                 </span>
-                <ArrowUpRight className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-brand" />
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      {/* Cursor-following preview (desktop only) */}
-      <div
-        ref={previewRef}
-        aria-hidden
-        className="pointer-events-none fixed top-0 left-0 z-40 hidden will-change-transform lg:block"
-      >
-        <div
-          className={cn(
-            "-translate-x-1/2 -translate-y-1/2 transition-opacity duration-300",
-            active !== null ? "opacity-100" : "opacity-0",
-          )}
-        >
-          {preview ? (
-            <ImagePlaceholder
-              tone="ink"
-              ratio="4 / 3"
-              label={preview.imageLabel}
-              src={preview.image}
-              sizes="288px"
-              className="w-72"
-            />
-          ) : null}
-        </div>
+      {/* Always-visible image panel (desktop only) */}
+      <div className="sticky top-24 hidden lg:block">
+        <Link href={current.href} aria-hidden={false} tabIndex={-1}>
+          <ImagePlaceholder
+            key={current.name}
+            tone="ink"
+            ratio="4 / 3"
+            label={current.imageLabel}
+            src={current.image}
+            sizes="360px"
+            className="w-full animate-in fade-in duration-300"
+          />
+        </Link>
       </div>
     </div>
   );
