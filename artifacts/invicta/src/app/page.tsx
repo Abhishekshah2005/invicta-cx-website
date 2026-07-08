@@ -29,14 +29,15 @@ export default function HomePage() {
     <>
       <SiteHeader />
       <main id="main">
-        <ColdOpen />
-        <TheMoment />
+        {/* TEMP-AUDIT-REORDER */}
+        <TheProof />
         <ThePeople />
         <TheArena />
+        <ColdOpen />
+        <TheMoment />
         <TheLayer />
         <TheWorld />
         <TheIndex />
-        <TheProof />
         <TheInvitation />
       </main>
       <SiteFooter />
