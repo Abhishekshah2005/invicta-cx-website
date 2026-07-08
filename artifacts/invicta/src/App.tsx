@@ -53,7 +53,7 @@ function App() {
     <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
       <AppProviders>
         <WebVitals />
-        {/* TEMP-DISABLED-FOR-RESPONSIVE-AUDIT <Loader /> */}
+        <Loader />
         <Noise opacity={0.025} />
         <Router />
       </AppProviders>
