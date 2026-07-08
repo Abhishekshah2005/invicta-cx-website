@@ -24,16 +24,16 @@ export function TheIndex() {
         <div className="mx-auto grid max-w-[104rem] gap-16 lg:grid-cols-2 lg:gap-24">
           <Reveal>
             <IndexList
-              kicker={INDEX.industries.kicker}
-              heading={INDEX.industries.heading}
-              items={INDEX.industries.items}
+              kicker={INDEX.services.kicker}
+              heading={INDEX.services.heading}
+              items={INDEX.services.items}
             />
           </Reveal>
           <Reveal>
             <IndexList
-              kicker={INDEX.services.kicker}
-              heading={INDEX.services.heading}
-              items={INDEX.services.items}
+              kicker={INDEX.industries.kicker}
+              heading={INDEX.industries.heading}
+              items={INDEX.industries.items}
             />
           </Reveal>
         </div>
