@@ -1,2 +1,1 @@
 - [WebGL in R3F](webgl-r3f-pattern.md) — probe WebGL support before mounting Canvas; ErrorBoundary alone won't catch context failures (they occur in effects, not render)
-- [Hover-only preview screenshots](hover-only-preview-screenshots.md) — cursor-hover-only image panels can't be verified via static screenshot; consider making them always-visible instead
